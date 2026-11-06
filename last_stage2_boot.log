@@ -1,0 +1,8597 @@
+=== STAGE2 BOOT DIAGNOSTIC LOG ===
+Uptime: 33.08
+--- mounts ---
+rootfs / rootfs rw,size=5251288k,nr_inodes=1312822 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+proc /proc proc rw,relatime 0 0
+none /config configfs rw,relatime 0 0
+none /tmp tmpfs rw,relatime 0 0
+devpts /dev/pts devpts rw,relatime,mode=600,ptmxmode=000 0 0
+--- stage2.log ---
+[STAGE2] init.sh started, uptime 0.67
+[STAGE2] modules loaded: ok=80 fail=0
+[STAGE2] UDC search result: '' (found after 30s)
+[STAGE2] ERROR: No UDC controller found!
+[STAGE2] Configuring network interface: (unnamed net_device) (172.16.42.1)
+[STAGE2] ifconfig err: ifconfig: SIOCSIFADDR: No such device
+[STAGE2] SHELL SERVICES READY: Telnet:23, NC:1337 on 172.16.42.1
+--- configfs usb_gadget ---
+total 0
+drwxr-xr-x    7 root     root             0 Jan  1 00:00 .
+drwxr-xr-x    3 root     root             0 Jan  1 00:00 ..
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 UDC
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bDeviceClass
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bDeviceProtocol
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bDeviceSubClass
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bMaxPacketSize0
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bcdDevice
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 bcdUSB
+drwxr-xr-x    3 root     root             0 Jan  1 00:00 configs
+drwxr-xr-x    3 root     root             0 Jan  1 00:00 functions
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 idProduct
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 idVendor
+-rw-r--r--    1 root     root          4096 Jan  1 00:00 max_speed
+drwxr-xr-x    2 root     root             0 Jan  1 00:00 os_desc
+drwxr-xr-x    3 root     root             0 Jan  1 00:00 strings
+drwxr-xr-x    2 root     root             0 Jan  1 00:00 webusb
+--- sys/class/udc ---
+total 0
+drwxr-xr-x    2 root     root             0 Jan  1 00:00 .
+drwxr-xr-x   76 root     root             0 Jan  1 00:00 ..
+--- loaded modules count ---
+81 /proc/modules
+--- dmesg tail ---
+[   11.236363][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-gfxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236367][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-gmxclvl: sync_state() pending due to 3d68024.clock-controller
+[   11.236370][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-gmxclvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236373][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to 1760000.clock-controller
+[   11.236377][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to ade0000.clock-controller
+[   11.236380][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to 3d90000.clock-controller
+[   11.236384][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to a3380000.remoteproc-soccp
+[   11.236387][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236390][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxlvl: sync_state() pending due to af54000.qcom,dp_display
+[   11.236393][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ebilvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236396][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-msslvl: sync_state() pending due to 4080000.remoteproc-mss
+[   11.236399][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-msslvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236403][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-nsplvl: sync_state() pending due to 32300000.remoteproc-cdsp
+[   11.236406][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-nsplvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236409][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-nsp2lvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236412][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to 188101c.remoteproc-spss
+[   11.236416][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to 3d90000.clock-controller
+[   11.236419][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to 4080000.remoteproc-mss
+[   11.236422][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to 32300000.remoteproc-cdsp
+[   11.236425][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to a3380000.remoteproc-soccp
+[   11.236428][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-cxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236431][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mmcxlvl: sync_state() pending due to ade0000.clock-controller
+[   11.236435][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mmcxlvl: sync_state() pending due to abf0000.clock-controller
+[   11.236438][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mmcxlvl: sync_state() pending due to aaf0000.clock-controller
+[   11.236441][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mmcxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236445][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mmcxlvl: sync_state() pending due to ae00000.qcom,mdss_mdp
+[   11.236448][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-lcxlvl: sync_state() pending due to 3000000.remoteproc-adsp
+[   11.236451][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-lcxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236454][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxclvl: sync_state() pending due to ade0000.clock-controller
+[   11.236458][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxclvl: sync_state() pending due to abf0000.clock-controller
+[   11.236461][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxclvl: sync_state() pending due to aaf0000.clock-controller
+[   11.236464][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxclvl: sync_state() pending due to 32300000.remoteproc-cdsp
+[   11.236467][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-mxclvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236470][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-lmxlvl: sync_state() pending due to 3000000.remoteproc-adsp
+[   11.236473][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-lmxlvl: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236477][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236480][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob2: sync_state() pending due to ac7b000.qcom,cci0:qcom,actuator0
+[   11.236483][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob2: sync_state() pending due to ac7b000.qcom,cci0:qcom,cam-sensor0
+[   11.236486][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob2: sync_state() pending due to ac7b000.qcom,cci0:qcom,eeprom0
+[   11.236489][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236493][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob4: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236496][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob4: sync_state() pending due to soc:qcom,dsi-display-primary
+[   11.236499][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob5: sync_state() pending due to c42d000.qcom,spmi
+[   11.236503][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob5: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236506][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob6: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236509][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob7: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236512][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob8: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236516][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob9: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236527][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob9: sync_state() pending due to soc:xiaomi_fingerprint
+[   11.236531][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7b000.qcom,cci0:qcom,actuator0
+[   11.236534][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7b000.qcom,cci0:qcom,cam-sensor0
+[   11.236537][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7b000.qcom,cci0:qcom,eeprom0
+[   11.236540][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7c000.qcom,cci1:qcom,ois3
+[   11.236543][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7c000.qcom,cci1:qcom,actuator3
+[   11.236547][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7c000.qcom,cci1:qcom,eeprom3
+[   11.236550][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to ac7c000.qcom,cci1:qcom,cam-sensor3
+[   11.236553][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob10: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236556][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to ac7c000.qcom,cci1:qcom,ois3
+[   11.236559][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to ac7c000.qcom,cci1:qcom,actuator3
+[   11.236563][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to ac7c000.qcom,cci1:qcom,eeprom3
+[   11.236566][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to ac7c000.qcom,cci1:qcom,cam-sensor3
+[   11.236569][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236572][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob11: sync_state() pending due to soc:qcom,dsi-display-primary
+[   11.236575][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob12: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236578][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob13: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236582][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob13: sync_state() pending due to soc:qcom,dsi-display-primary
+[   11.236585][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob14: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236588][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob15: sync_state() pending due to c42d000.qcom,spmi
+[   11.236591][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob15: sync_state() pending due to soc:spf_core_platform
+[   11.236594][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob15: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236597][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob16: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236601][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob17: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236604][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb1: sync_state() pending due to soc:spf_core_platform
+[   11.236607][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236610][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7b000.qcom,cci0:qcom,actuator0
+[   11.236613][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7b000.qcom,cci0:qcom,cam-sensor0
+[   11.236617][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7b000.qcom,cci0:qcom,eeprom0
+[   11.236620][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7c000.qcom,cci1:qcom,ois3
+[   11.236623][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7c000.qcom,cci1:qcom,actuator3
+[   11.236627][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7c000.qcom,cci1:qcom,eeprom3
+[   11.236630][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to ac7c000.qcom,cci1:qcom,cam-sensor3
+[   11.236633][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236636][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpd1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236639][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpd3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236643][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpd4: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236646][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpd4: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236649][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpd4: sync_state() pending due to soc:bt_peach
+[   11.236653][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldod1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236656][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldod2: sync_state() pending due to 88e3000.hsphy
+[   11.236659][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldod2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236662][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldod2: sync_state() pending due to af54000.qcom,dp_display
+[   11.236665][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldod3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236669][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpf5: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236672][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpf5: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236675][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpf5: sync_state() pending due to soc:bt_peach
+[   11.236678][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to 88e3000.hsphy
+[   11.236681][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to ada9000.qcom,csiphy0
+[   11.236684][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to adab000.qcom,csiphy1
+[   11.236687][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to adaf000.qcom,csiphy3
+[   11.236690][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to adb3000.qcom,csiphy5
+[   11.236694][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236697][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236700][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof2: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236703][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof2: sync_state() pending due to soc:bt_peach
+[   11.236706][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236709][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof3: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236712][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldof3: sync_state() pending due to soc:bt_peach
+[   11.236716][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpg1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236719][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpg3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236722][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpg3: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236725][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpg3: sync_state() pending due to soc:bt_peach
+[   11.236728][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpg4: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236731][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236734][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236738][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog2: sync_state() pending due to soc:qcom,dsi-display-primary
+[   11.236741][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to 88e3000.hsphy
+[   11.236744][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to ada9000.qcom,csiphy0
+[   11.236747][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to adab000.qcom,csiphy1
+[   11.236750][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to adad000.qcom,csiphy2
+[   11.236753][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to adaf000.qcom,csiphy3
+[   11.236756][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to adb1000.qcom,csiphy4
+[   11.236759][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to adb3000.qcom,csiphy5
+[   11.236763][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236766][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to ae94000.qcom,mdss_dsi_ctrl0
+[   11.236769][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to ae96000.qcom,mdss_dsi_ctrl1
+[   11.236772][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldog3: sync_state() pending due to af54000.qcom,dp_display
+[   11.236776][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpi7: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236779][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpi7: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236782][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpi7: sync_state() pending due to soc:bt_peach
+[   11.236785][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpi8: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236789][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi1: sync_state() pending due to ac7b000.qcom,cci0:qcom,actuator0
+[   11.236792][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi1: sync_state() pending due to ac7b000.qcom,cci0:qcom,cam-sensor0
+[   11.236795][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi1: sync_state() pending due to ac7b000.qcom,cci0:qcom,eeprom0
+[   11.236798][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236801][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi2: sync_state() pending due to soc:spf_core_platform
+[   11.236805][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236808][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi3: sync_state() pending due to adad000.qcom,csiphy2
+[   11.236811][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi3: sync_state() pending due to adb1000.qcom,csiphy4
+[   11.236814][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236817][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi3: sync_state() pending due to ae95000.qcom,mdss_dsi_phy0
+[   11.236820][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoi3: sync_state() pending due to ae97000.qcom,mdss_dsi_phy1
+[   11.236823][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpj2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236827][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-smpj3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236830][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoj1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236833][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoj2: sync_state() pending due to 188101c.remoteproc-spss
+[   11.236836][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldoj2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236839][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236843][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236846][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236849][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok4: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236852][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok5: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236855][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok6: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236858][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok6: sync_state() pending due to b0000000.qcom,cnss-peach
+[   11.236861][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok6: sync_state() pending due to soc:bt_peach
+[   11.236864][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldok7: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236867][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom1: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236870][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom2: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236874][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom3: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236877][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom4: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236880][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom5: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236883][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom6: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236886][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom7: sync_state() pending due to ac7c000.qcom,cci1:qcom,ois3
+[   11.236889][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom7: sync_state() pending due to ac7c000.qcom,cci1:qcom,actuator3
+[   11.236893][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom7: sync_state() pending due to ac7c000.qcom,cci1:qcom,eeprom3
+[   11.236896][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom7: sync_state() pending due to ac7c000.qcom,cci1:qcom,cam-sensor3
+[   11.236899][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom7: sync_state() pending due to soc:regulator-ocp-notifier
+[   11.236903][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 980000.i2c
+[   11.236906][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 980000.i2c
+[   11.236909][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 980000.i2c
+[   11.236912][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 980000.i2c
+[   11.236916][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to a80000.i2c
+[   11.236919][    T8] qnoc-sun 16e0000.interconnect: sync_state() pending due to a80000.i2c
+[   11.236922][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to a80000.i2c
+[   11.236925][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to a80000.i2c
+[   11.236928][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to a80000.i2c
+[   11.236931][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to a80000.i2c
+[   11.236934][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to a88000.spi
+[   11.236937][    T8] qnoc-sun 16e0000.interconnect: sync_state() pending due to a88000.spi
+[   11.236940][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to a88000.spi
+[   11.236943][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to a88000.spi
+[   11.236946][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to a88000.spi
+[   11.236949][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to a88000.spi
+[   11.236952][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob16: sync_state() pending due to a88000.spi
+[   11.236955][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob12: sync_state() pending due to a88000.spi
+[   11.236959][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to a8c000.i2c
+[   11.236962][    T8] qnoc-sun 16e0000.interconnect: sync_state() pending due to a8c000.i2c
+[   11.236965][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to a8c000.i2c
+[   11.236968][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to a8c000.i2c
+[   11.236971][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to a8c000.i2c
+[   11.236974][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to a8c000.i2c
+[   11.236977][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldob15: sync_state() pending due to a8c000.i2c
+[   11.236980][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to a94000.i2c
+[   11.236983][    T8] qnoc-sun 16e0000.interconnect: sync_state() pending due to a94000.i2c
+[   11.236986][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to a94000.i2c
+[   11.236989][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to a94000.i2c
+[   11.236992][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to a94000.i2c
+[   11.236995][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to a94000.i2c
+[   11.237000][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 880000.i2c
+[   11.237003][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 880000.i2c
+[   11.237006][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 880000.i2c
+[   11.237009][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 880000.i2c
+[   11.237012][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 880000.i2c
+[   11.237015][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 880000.i2c
+[   11.237018][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom6: sync_state() pending due to 880000.i2c
+[   11.237022][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom4: sync_state() pending due to 880000.i2c
+[   11.237025][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom2: sync_state() pending due to 880000.i2c
+[   11.237028][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to 880000.i2c
+[   11.237031][    T8] gdsc adf134c.qcom,gdsc: sync_state() pending due to 880000.i2c
+[   11.237035][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 884000.i2c
+[   11.237038][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 884000.i2c
+[   11.237041][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 884000.i2c
+[   11.237044][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 884000.i2c
+[   11.237048][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 884000.i2c
+[   11.237051][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 884000.i2c
+[   11.237054][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom5: sync_state() pending due to 884000.i2c
+[   11.237057][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom3: sync_state() pending due to 884000.i2c
+[   11.237060][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-ldom1: sync_state() pending due to 884000.i2c
+[   11.237063][    T8] qcom,rpmh-regulator 16500000.rsc:drv@2:rpmh-regulator-bobb2: sync_state() pending due to 884000.i2c
+[   11.237066][    T8] gdsc adf134c.qcom,gdsc: sync_state() pending due to 884000.i2c
+[   11.237069][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 88c000.i2c
+[   11.237072][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 88c000.i2c
+[   11.237075][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 88c000.i2c
+[   11.237079][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 88c000.i2c
+[   11.237082][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 88c000.i2c
+[   11.237085][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 88c000.i2c
+[   11.237088][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 894000.q2spi
+[   11.237091][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 894000.q2spi
+[   11.237094][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 894000.q2spi
+[   11.237097][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 894000.q2spi
+[   11.237100][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 894000.q2spi
+[   11.237103][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 894000.q2spi
+[   11.237106][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237109][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237112][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237115][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237118][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237121][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 898000.qcom,qup_uart
+[   11.237125][    T8] qnoc-sun soc:interconnect@1: sync_state() pending due to 89c000.spi
+[   11.237128][    T8] qnoc-sun 1700000.interconnect: sync_state() pending due to 89c000.spi
+[   11.237131][    T8] qnoc-sun 1600000.interconnect: sync_state() pending due to 89c000.spi
+[   11.237134][    T8] qnoc-sun 24100000.interconnect: sync_state() pending due to 89c000.spi
+[   11.237137][    T8] qnoc-sun soc:interconnect@0: sync_state() pending due to 89c000.spi
+[   11.237140][    T8] gcc-sun 100000.clock-controller: sync_state() pending due to 89c000.spi
+[   31.712609][   T93] display_panel_vddd: disabling
+[   31.712618][   T93] display_panel_vddioldo: disabling
+[   32.076493][    T1] [STAGE2] UDC search result: '' (found after 30s)
+[   32.080695][    T1] [STAGE2] ERROR: No UDC controller found!
+[   33.081677][    T1] [STAGE2] Configuring network interface: (unnamed net_device) (172.16.42.1)
+[   33.083362][    T1] [STAGE2] ifconfig err: ifconfig: SIOCSIFADDR: No such device
+[   33.088510][    T1] [STAGE2] SHELL SERVICES READY: Telnet:23, NC:1337 on 172.16.42.1
+=== END DIAGNOSTIC LOG ===
+shared_relroE
+/msS]
+snapshotctlOR
+1`system&
+textclassifi
+train-info
+virtualization
+?vpn0<
+?vpn0<
+OwifiQ
+_ce/[0-9]+e
+r//n
+mainline_supplican
+TxQe
+pa_socket
+mctrl.*
++|lU
+Ovold
+date_eng
+L		*
+dropbox
+heapdump
+bmethod
+/wmb
+0e_r
+cs/cur(
+kG-.*
+?ref
+Nman_
+AKendo
+2]-.*8&
+ombstone_
+[orage:W
+?1>g
+checkin
+fingerprin
+FOirisP
+_charta
+,pdk_sand
+2#dk8
+21Qd
+ollback
+apex_moduleA
+	/com\.android\.appsearch
+permissio
+?uwb
+incremental
+_controlk
+/MT_[^/]+/mount/.pending_reads:
+_E/;
+=log
+blocks_written
+c]a1_
+q;ani
+mnt/expand/
+pr,</=/[
+alvikcache
+?oatv
+5tmp
+Avmdl
+O\.tm
+ Nhellt
+nlocal/
++`media_
+?dirh&
+r<_a
+?old6
+WoreduS6
+wallpape
+l\]_orig
+ringtone
+ortcut_manager_icons
+ice/bitmap
+photo\.png
+utdown_checkpoints
+torage_area_key
+/up~
+o_stage
+5efs
+vrecoverw
+mprivatr
+7lay
+scratch
+>gsi[
+>gsiZ
+npublic_
+E/dsuk
+encryption_dir{
+>ota
+password_slotn
+bootstat
+d_install?
+P>dogD
+epair_modeo
+d{F;<
+;tconfig_
+^flagsv
+tradeinp
+refetchT
+libprocessgroups
+^superzw
+z/snapsh=G
+asec_apkPm
+Y\.zipV
+#].'
+x+p-	
+r mn;bjdia_rw
+_through7L
+hA6>g
+runtime
+jvendor
+nroduct
+Dpost;w@execT
+)/bin/check_dynamic_parti
+preopt_script
+0dexo
+]upper
+j&."
+O|odm
+lE_rcp.!
+4!M-rcp1!
+E7;y
+.=!Q-
+5ild
+0hw/0
+	hal_wifi_hostapd_default
+Came_
+)m@64)?	
+]z\.so
+_c\+\+
+?ft2
+H?ion
+G?png
+Obase
+??las
+GOlzma
+'6OutilY
+}plicant
+7wpaB
+827w
+vndservicemanager
+_cinfo
+jsoncpp
+0rec
+M\.sh
+!U1l
+hwbinderq
+RSCpuRef(
+@oDriver
+hardware
+I>idl
+dmabufhea
+omemory
+_internal
+compiler_rt
+unwindstack
+gralloctype~J
+_group
+fu_macsec
+transport
+tS(G
+Ocall
+w_xI
+ln(>y
+#?~=uwb3~
+android\.
+JCuwb-
+?_@1\.0
+B4Nf
+"!ir
+=drm
+"?drm
+?nfc
+4?nfc
+?usb
+4?usb
+safe_union
+Nligh
+_power
+_-lazy
+X&o\.toke
+X_q.
+matrace
+gatekeep
+ohealth
+Fsp$
+\.exampl
+olowpan
+common-V2-nd
+m.M1-
+=evs
+utomotiv
+vs(.*)?
+50cas
+_[0-2]
+tv_hdmi_cec
+4@tv\.S
+..c]
+O-imp
+bootctl
+#^1b
+q	>e
+?gns
+_radio
+Oearc
+Ninpu
+ibrator
+(IqO|\.)
+S?9]+
+keymaster
+mediacodec
+\.omx@1
+renderscript
+n_socket
+?can
+0ohermal
+^gadge
+%"\.R
+\.fmq-V1
+%\.W
+TNstat
+L!T'!\.S
+K(T-	
+sensors
+K.*)
+_tuner
+6`ZVt
+f	bB
+identityt65
+)3c2-J
+cf0	H
+mconfig
+Mu<'"\.T
+?intB
+security\.X
+graphics
+f[1g
+b0map
+''@7=B
+(50"
+bluetoothJB4
+h@6	oTO
+@dump{
+eLB4
+'$\.
+xOaidl
++#@1
+rmationui(
+texthub6
+*6n_alloc
+storagev$4
+#\.V
+e_element%
+owcrypt
+B5@trus
+?hal
+~@hdmi]
+0nec
+~Z0h
+Oy*,
+(\.multihal)?
+broadcast
+H#	U
+@\d+\.\d+
+rm_clearkey_
+,5drmP
+D)?\.a
+classifie	I
+&\.X
+ebootescrow]
+bja1e
+readnetwork
+$_sim)?K
+offloadH
+nderscrip@UOimpl
+?ivn
+ivn@V1-(.*)n
+s5/@2
+oV2-ndk
+poser3-V1
+.aca
+0#aiometr
+mediaquality 
++@\.fiuO
+_tuner
+U'=1Smon-V
+)oeffect,
+*-~ranging
+0ump*
+.1]U=
+6UV[1-2K
+btlinux
+#\.c
+ngerprint
+4	-V
+=rol)
+lmp_even
+!th[
+'Uity\.Z
+2non|
+A8J"
+[F%:
+]nsors1
+multihal)
+retkeeper
+remoteac$2
+ocamera
+\.provider(@2
+O=_64r
+external
+L -/
+vehicle
+P|emul
+~LSx
+m_capabilitieL-
+"@virtw
+zation\.c
+Mnoop
+n0l_p
+r.((
+3)*(
+|protocan
+wpa_datamy
+/wifi/wpa(/.*/`
+/uF{	
+jostapdp
+`rootfsq
+adb_keys
+Qbuild'"
+"seV
+yversion
+6ini
+lost\+found
+ecgroupW
+?accW
+iconfig
+jmirrorO9
+<91_
+r<9j
+9tmp
+bug_ramdisk
+cond_stage_resource
+?sys
+`apex_m}
+ootstrap-2
+Jhell
+?tmp
+postinstallu
+greports[X
+HZharge
+?etc
+BXosdcardBX
+Eexts
+)?lat\
+iS?duc[
+1zS_d
+sepolicy\
+mapping_
+]\.cil\
+Nerty
+>appk
+$eem
+Ptore2
+/hw/
+>vnds
+ashmem_deC
+Bdev/
+obinder;
+zoned_block@
+/by-name/-
+gonsolex
+dmabuf_system_heapJ
+1dma
+-uncachedk
+PAublkJ%7rolw
+GudioO
+9eacE
+untime_event_log_tag
+P-log- 
+-q%3g
+(usL%
+GEh_rando
+?ionM
+?ionM
+__chordr
+`/Oloop`/	
+?mtp
+?usb
+7msg<
+?nfc5
+On5445
+?tmx3
+?gpu
+pvrsrvkm
+(bu9
+?kvm
+Onull
+>^_video,4
+nvhdcp1,4
+proc_user 
+adbd_socketE
+aconfigd_mainlineU
+dnsproxyn
+umpstate\
+S~Xwmark
+?lmk= 	
+/ogH
+/ogH
+Omdns4
+pdx_bufferhub_dirQ
+3pdx_
+:_huQ
+	0cli
+endpoint
+performance,
+display\
+3vr/-
+manager
+screenshoV
+_vsync
+rng_seede
+!wropertya
+Kervi
+o	'3t
+N_for
+xrecover
+R?ril
+@snapf
+tombstoned_crash
+java_trac
+ae+?G
+intercep
+9sum
+ ?duc
+heapprof
+Yuncry#
+Izygo
+econdary
+H 3d
+sap_pool_primo
+oowntty\
+?tty\
+*/un/
+/un/
+[%7hid0
+_inputL
++fWandom;
+usbaccessor
+5sb_!
+vpvhost-v
+ZU4-
+D`vndbin	
+watchdogF
+,JYqtagu
+3xt_
+$Ozero
+7ies9
+T'__ 
+/appcompat_
+:rid
+Iinfo;
+mm_events_exec
+5in/"
+auditctlP
+9bccK
+&Sblank
+lWP7k
+Wcharg^
+?e2fT%
+_droidT%
+NfsckL
+extra_free_kbyte
+I\.sh
+y\.exfat
+EinitV
+_olbox
+mini-key
+nsload_
+NmakeW
+__msdo
+ocpdump
+oresizeN
+mld\.mc	P
+zologcatL
+Fshel
+?una+
+orun-as
+rm*3-
+uootanimP
+Jatio
+'stF
+&/64c
+  erh
+Hmana
+9$ 	
+urfaceflinn
+3gpu
+ufferhubd^
+erformanced
+0drm
+/32`
+(/64`
+_ciden
+Ghelpp
+p/iw
+)iwX
+netutils_wrap
+_-1\.0:
+Y[ql
+Ovold
+wificondo%
+e8ot_<
+v<ot-:
+_audio
+3y`^media4@
+metrics
+\camer
+?ctol 
+owcodec:
+transcodingj
+6dns
+p_stalldK
+'v3l
+apreopt_chroott
+p}kRc
+'slt
+credstorg
+:keyY
+8pri
+gatekeeperd
+tombstone
+recovery_persis
+refreshv
+odcarddd
+snapshot
+7mou
+Odhcp
+-6\.8\.2
+_dmesg
+dnsmasq
+linkerconfig
+ootstrapp
+I+ ?llky
+/lmF
+	/mkF
+?usb
+Qputfl
+/og4
+/og4
+lpdumpd
+ss_hwm_reset	
+perfetto
+F%otectrl
+/isR
+jcmdlin
+_robesz%
+_relayz
+O_red
+heapprofd
+*ouncryp
+pdate_verifi_P
+^_file
+jP_wrappU
+e?vdc
+?vdc
++\.d
+preloads_copyh
+2cachenameF
+_gdiskE
+FblkiR0
+':K%pb
+lags_health_chec
+ ;sl
+5Gengi
+	z_nostat*V
+FKocollec
+gstorag
+virtual_touchpad
+ocamera:
+wk_bufferhubm
+w/android\.frameworks\.:
+@1\.0-servic
+!\fsuspen
+#\.4
+emcgv2_activation_depth
+_lw1i
+iv<Q_
+cgroup_descog
+7Betc/$
+s\.json
+event_log_t
+P-log-'
+epasswdR
+ ac|
+selinux/plat_/
+issions\.xmG<
+mk<=]
+perty_context
+3ee_
+h/hw
+R^e2_ke
+epolicy!
+]\.cil!
+and_mapping
+MMa256!Y
+0ask
+6adb
+70vol2
+epare_subdirs
+E$o	
+0bpf
+3net%
+n5 	a
+watchdog
+u%WconfiY
+?pexf
+*0?gsi*0
+impleperf
+QGrunn
+_$QQr
+++~0igr%
+legacy_obb_dat3
+utomotive_display
+#\.I
+snapuser
+Aoodsign
+ehicle_bind
+aOutil3Q
+3car+
+_proxyQ
+evsmanag
+Jrobe
+Sbert_)
+_vm_setupn
+tradeinmode>
+oefetch
+recompiled
+LEroot
+packages_lis.
+ \.(
+gAame_
+ Pinter
+ndebug_socket
+unsolzygoteq
+@sistT
+amedia_
+a%irj
+iisc_ceC
+zage_are
+luetooth*5
+/\.a2dp_ctrla
+95<C
+Ondor
+?`nt_exp
+?Bmnt/
+ublic_meta
+Jp/dsu/ac
+/obootedm
+lp_nameso
+)vm6
+0ver
+wremount
+econd_st
+resources/6
+Tcache
+ /oNp#pp
+ crw
+070701000493ef0000a1e80
+Jinit
+@.rec?
+y.hlthchrg.rc
+# charger for A
+ 8.0 and up
+    critical
+seclabel u:r:)
+Y:s0
++"ldZ
+Qon fs
+export LD_CONFIG_FILE 
+3ld.9
+Ztxt
+?133
+3ogd
+Ptart 
+lass core=
+qr seqpa
+P0666 
+w dgram+passcred 0222/
+ /proc/kmsg r
+2dev
+Vgroup
+capabilities SYSLOG AUDIT
+TROL SETGID
+>UID
+?dc0
++Bqcomh
+Copyright (c) 2017-2023, The L
+p Founda
+a. All /
+Ps res
+# Redistribu)
+bse in 
+`binary
+ms, with or
+# modificl
+, are permitted provided that the following }
+pmet:
+Ds of
+code must retainU
+@abov
+  notice, this 
+disclaimer.
+produce
+documenta
+/or other materials
+1Nei:
+E nor
+0its
+ors may be us
+ se;
+ pr3
+ts derived from$
+Psoftw
+P specn
+@ pri
+(THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND 
+IBUTORS "AS IS"
+2ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,w
+ OF MERCHANTABILITY, FITNk
+	FOR A PARTICULAR PURPOSE
+# NON-INFRINGEMENT 
+DISCLAIMED.  IN NO EV
+[SHALL
+OWNER OR
+BE LIABLE
+`DIRECT
+CIDENTAL, SPECIAL,
+# EXEMPLARY, ORV
+SEQUENTIAL DAMAGES (-
+1CUR
+SUBSTITUTE GOOD
+SERVICES; LOSH
+USE, DATA{
+pFITS;
+ABUSIT
+INTERRUPTION) HOWEVER CAUSED
+0ORYW
+pWHETHERZ
+gSTRICT)
+GTORT
+ NEGLIGENCEq
+WISE) ARIS#
+`WAY OU
+0 IF
+0DVI
+RPOSSI
+#CHy
+wifi.rc
+.p0C-qti'
+tprop prepdecrypt.
+Q trueI
+cearly-.	
+@/wal
+hed_lib_
+p,magiskt
+@,Upd
+_engine_sideload"e
+pmask_foR
+1255
+2ait^
+`block/E
+/soc/${ro
+ de(	
+oymlink:
+P# qse
+qd needsn
+SSD parti
+0dur#
+Sializ
+ St+
+#ngP
+"itY
+" races ue
+Qd/by-{
+2cre
+n leaves KeyMint inO
+a timed-
+be befo
+~begins.a
+~/ssd 10z
+kernel/firm3
+_sysfs_fallback 1
+@hmod
+Bown 
+~ drmrpc%
+>ion=
+bmkdir 
+ 0775 shell1
+?tmp)
+Z none.
+A rec9
+install_key~
+Dpost
+odm.variant-script)
+C.usb
+A adbQ
+erty:twrp.modules.
+1ed=U
+?vfax
+slot_suffix}S
+3 ro
+Load ADSP
+GPMIC
+adsp/ssr
++ 1I
+/power_supply/battery.
+health-default&
+csuper.
+6 &&-
+1ro.
+1=en
+s_copied=1J
+ibratorfeature)
+touch_re
+Pkeymi
+trongbox 
+se_omapi
+f.ready
+ co+
+# For
+S on 5
+Unewer
+stream 422
+?1d1
+Hfs 0
+/usb_gadget/g1
+/bcdUSB 0x0200.
+os_desc/
+3idV	
+_x27170
+ 0x4EE7
+0/st
+s/0x409
+qnumber 1
+/o}J
+pmanufac
+/l})
+Afunc
+c/mass_
+g/.09
+ffs.mtp2
+EfastT
+Bs/b.
+@MaxP 
+	?0x1:
+0qw_
+ "MSFT100"
+'.1<
+O-ffs
+I/mtp
+?adb-
+0fs 
+uid=1024,g	
+@,no_
+connect$
+/00b
+_type 3&
+cancel 1Q
+?r=*D
+6bus
+)s/<
+.dwc3_msm:-a
+q.ssusb}
+-_ idleS
+ipheral
+PUDC "I
+ opZ
+/ 0 
+?Sub2
+Protocol2
+/rm\
+/f1,
+@svc.
+	Omtp,R
+.=1O
+_"adb"0
+O18D10
+VOmtp"
+EOFF40
+OD00D/
+?e8a
+ Add by jaso
+0cp-
+N-ko
+C!Fcpkoz 
+/cnss_prealloc.ko
+	/nlT
+/nlN
+Uwlan_ 
+ipc_qmi_sv
+smem-mailboxa
+rmnet_meM
+?ipaM
+Ofkil
+fg80211{
+3!"[
+"][c
+v] WiFi 
+ successfully!"
+Nko 1<
+:End/,
+R&Aare-
+Ded"
+Bpath^+
+/qca_cld8
+/peach_v2A
++*1dir
+p/WCNSS_j5
+_cfg.ini
+mac.bin `
+2wpa=+Ricant*
+Q] SetS*
+tenv..."
+WLAN SSR D*
+radio wake
+'un0
+_ done
+G1ertr-ns
+ -fn
+(_abled\;
+NET_BIND_
+4rmto"	
+(_ rt 0|
+Qtftp_
+jper_mgu
+\proxy
+>0cnsv
+Iemonq
+_-n -lz
+.pinet ne
+1@min 
+_ADMIN
+A-Dnl
+0 -i
+0 -dd -O
+/Ms -c
+Zdhcpc&@
+_onesh
+?.shd
+urvival.j
+ Qualcomm 
+c.rc
+FVivoc40
+A fs_
+en_delay 
+	!toG
+Apss_
+L&	<=
+%Lkiwi
+Z& -
+F` -- /s
+zsh -c "
+$3_$
+1Wai
+k(Bnet/)
+/10j
+	*..
+tus=runnrB
+hOO41ed
+Klib
+ /a4|
+/cs40l26-a2h
+WMDR*
+aC:\pro.W
+works\O2\p20_haptic_tun4
+o2_a2h_music_20241023e
+1|5+
+TF80
+=fff
+Rcalib
+O2_P01_BinFW_H
+N506\j
+?bb2 
+/20 
+Awmfw 
+1FW(-
+Tue 23 Apr 
+ 12:24:37 GMT Dayl.G2Tim
+l^%> 
+'LT&m
+RSAM
+_d=_Pb
+!9Cn~
+`0 	
+AOy 
+8Qs:Qn
+A!~q_H
+0QT!
+Q_h-_
+  t	2
+Oy!_
+Qn)6s
+2}$H
+%Q&H
+Na%^
+'z5'
+8Yz 
+	rD#n"
+1IB1
+	9\!O
+8	Op
+*@)	
+_AC.R
+OmNO
+TC<c
+A^Q=O
+lS! 
+^<" _
+02S1!^
+P	4R
+P	.b
+_cUO
+@_!@
+kmJF
+X"G0"
+cQ_a 
+0a_@
+#_@X
+`		HL
+0a:T 
+A"`@9"@
+	:TP
+!C@	
+XS4  
+_}1_
+@*60
+ :T@n
+.D 	
+`B{)
+l%pp:
+!!_q
+b)Oh
+aHm0F
+$	OTmOr
+Z$h$
+$1O@(
+~Y2{I
+HK  
+x($9g@$+
+!t	@
+@	OP
+P3(P1
+@P00
+xdw`
+2'vUG
+(vTg|
+FIRM
+_CS40L26_CALIB%
+HALO_STATE
+HEARTBEAT
+POWER_MOD
+O_BLK_SIZE
+LAST_WAKESRC_CTL
+DUSERz
+_INPUT
+@RESP
+POTP_MEM
+HAPTICS_OR|
+@REFC
+/RC,
+I2S_EN
+MDSYNC_EN
+	WARM_BOOT
+DETECT_32K
+PLL_TRIM_SAV
+REDC_PLAYTIME_MS
+CALL_RAM_INIT
+CURRENT_DUCK
+bPLACE_
+DYNAMIC_F0
+IMON
+pPPTHRES
+FRME_SKIP
+NUM_PEAKS_TOFIND
+DYN,
+BUZZG
+_EFFECTS1_
+SFREQ
+PLEVEL
+@DURAd
+qTRIGGER*
+DUNT
+RHANDL
+6POSI
+._E"
+dQ_PUSH'
+2MAPb
+_PACKED/
+_FROM_OTP
+CVIBE
+@STOR
+FFSET
+0OUT;
+0WAV+
+UDEX
+1END
+@BACKp
+	!OFc
+GTYPE$
+'OMl
+aOMPENS
+$XM.
+pOWT_BAS(
+LNEXT4
+5_XM
+ZERO_CROSS
+5RTH
+NGAIND
+~LAGS
+0GPI
+DUMMY
+ESTIM>
+EQ_SPAN
+~CENTRE
+CHIRP_AMPt
+ETONE:	
+SVCP2
+XM_LO_LP_SO
+NSVC_
+NHI_B@
+S	XM_V
+.I_0
+B_THR
+/HI@
+XM_SWf
+sS_HW
+LVL_CTRL
+0_SF|
+*LO0
++LO0
+.HI8
+!REd
+CVMON
+[ERROR
+yV_DELAYh
+XM_OL2C
+!aP_FRAM
+$RTx
+PMAX_M
+^SSA
+PPILOT
+PERIOD_S
+@OFST
+"j_NSMP
+CANCEL_SF
+ID_ACPOW_COEFF8
+qDCNOTCH*
+ IDc'7_DL
+&ID5
+9POWp
+#HI#
+$CP@
+2UNS
+'UN&
+`NGLEME
+k	yAFE_VAL
+SHUTDOWN
+"RE#
+'TH(
+ALOCK$
+:OFFH
+#OK'
+0QVERSE7
+*AX0
+*AX0
+0SWI
+R_LPF_BW
+wEL_HIGH
+4LOW
+6PBK
+.LOl
+`ACQ_RL
+6ACC7
+ALSFI$#
+PINCRN
+?TRK`
+e_CL2OL`
+UFORCE
+ WH['
+O_HIBERNATE&X
+b)	,
+FT_CF
+*LO$"
+.HI8
+i!	l!
+*LO0
+i!	l!
+i!	l!
+.HI8
+	i!	l!
+A!	D!
+&AX(
+@D @
+HAER
+_BITMASK
+	1SUPk
+9WPTX_IDL
+`LSW_TX
+TICKS
+\2ON_
+eACTIVE'
+hTANDBY&
+DWxMAILBOX
+QQUEUE
+ LEh<
++WT@
+.RD4
+Y0SOU
+bATTENU
+oK	pJ
+@P_NM
+GBUG
+lZ BO
+R1DIS
+L DBZ]TV_REL
+@RISE
+`0DROXO
+1_FS,
+LOOR
+d	WBEMF
+HVBSTx
+PI\FMUTE[
+@Mad
+aFRMPRWU
+PERCAPTUREWIND
+^TREAMd
+DVLMb
+ATKm
+sRA_OVERz
+CSAT
+!EQ 
+@1_X
+TO	@
+?	TO
+ "OPi
+1LOW
+NLOPE@
+%DI,
+(MS@
+$0LRAv
+qNORM_F0X
+VOLTAGE_
+xBUF_PTR@
+)YM+
+2?dbc
+>12_
+K724\f
+3/vl
+3dvl
+/49d
+3/sv|
+F=31\f
+=q_b
+?20f
+peakerphoneTR
+_ 1d
+{+"d
+Aate:
+l-09-09$
+ COMMENT: 
+?dfbx!
+O1:41
+|5+e
+033 `
+&TF8
+eFBd5
+dvSG|
+(6l,
+n+ n
+W@,!OD
+!qHJr
+B0!s
+>	s:Qs
+b!zY
+$!_d0
+ 0u@0f	
+@0a@
+2}kH
+0DFs
+C%Q&
+4&7{
+Qm2!"'
+!,T`
+ ,d%
+#IP!	
+@#,*!
+9V	9X
+A_$P
+qNt'
+Cm3F
+@!_`	
+a_t9
+'hLd
+1_`1
+;20n
+3"_bX!C
+ !bXR
+A%71^aI
+RR<#
+BRs,
+QI4RA
+ "WP"
+@#1O
+,|(	
+ "fe
+'!_kI 
+2!@)
+@$1 `
+ BW@G 
+'2<n@
+n!Nr
+!Na%N
+9ZR,
+=0@,
+	9"!
+B4:%
+Fq: 
+:"<#S
+n||0
+E(#P
+I:T@
+@jKp
+Oi,3
+7@ @
+ PT.0
+!O3y
+:J XX
+HL:h
+MA^B0^a
+!a10
+"*`C
+0A2H
+S	A2H_
+gBLEFTb
+FRIGH%
+(&!RAN
+@SAMP(&
+aVOLUME
+PFM_OS
+!TA=
+ FCu
+]7HI
+0OUT#
+1RUM
+qALPHA_P{
+BSMTHz
+`TRANSI %YSCALE
+ASUSTI
+SGC_ON`
+!UB,
+2LIC2
+XPULSE
+2BUM 
+.ZZx
+PADDING1
+0OUTc
+ 20	
+?1ed8
+nkerconfig|
+1/1b|
+B/ld.
+\.txt
+metadatax
+M<odmt
+@/app
+tvendor/
+<bin
+=/hw
+?cde{
+.3f|
+/android.hard+
+.security.keymint-service.strongbox
+4ELF;
+#L$ 
+b/syste
+$64 
+125vK7?
+__libc_init
+__cxa_atex
+ZN4aidl7
+17IKeyMintOperation4hashE
+_ZGVF
+12sharedsecret13IS
+29IRemotelyProvisionedComponen
+2se5omapi22ISR
+eElementListener
+~Channelq
+NSess
+NReadP
+TVNSt3__120__
+_ptr_pointerIPN3ndk13
+RefBaseENS_10.
+yIS2_E27A
+default_delete"
+9allocato8
+3EEE
+guard_acquire
+12basic_stringIc}
+1char_traitsIcW
+YED2EvX
+areleasX
+4base15GetBoolPropertyERKz
+.Ebf
+O1Getb
+8=S9_d
+	9ShouldLogENS0_11LogSeveH
+NEPKc
+0LogMessageC1#
+OS3_i:
+6streamEv&
+D1Ev
+ABinderProcess_setThreadPoolMax
+\Count+
+Fjoin,
+"22K
+pp_verbose_abort
+_Znwm
+strlen
+_ZdlPv
+memchr
+__errnog
+E6sentryC1ERS3_>
+$"D1-
+P8ios_0
+6getlocEvX
++le2
+9use_facetER
+12idD
+5clearEj
+weak_cou
+T3__ge
+rERKSt9type_info
+Manager_add
+95Bn"
+Y4lock&
+1__call_onceERVmPvPFv
++p6append
+ _Wd
+0pro
+6newt
+d5mutex
+AdecS
+__assert
+66un/
+84Bn.	
+O30Bn
+ 5c`
+2IcE
+8javacard14O
+`Transp
+y5Socket)
+ialized
+10descriptor
+'$42
+@move
+tack_chk_fail
+getauxval#
+0setc
+ncmp
+libbi
+ndk.so
+LIBB
+`R_NDK
+3V3-G
+?rkp(
+3-V11
+caster_
+c_utils'
+bor_external
+Srypto
+4abl<
+4jc_
+mthales
+3log
+1se.
+3c++
+`Check 
+ed: status == 
+Add _
+!!! 
+ro.arch
+kernel.qemu
+curr+
+build is for emul<
+!`length
+or was thrown in -fno-excep
+s mode with m
+ "%s"
+exynos9810
+Race detected.
+.fingerprint
+ |"a begin
+aea3745b559d2977f0676952e510fb0547a52140
+ D		8
+tadding @
+instance: 
+>9bcfe4f35ceb2088278ddf87c83adee8014
+74a538630d5d90f732f361a2313cbb69b09eb047
+st/opensource/
+/3.0/hal/
+#?cpp
+frameworks/native/libs/f	
+/ndk/include_cpp<$
+	Cauto
+7d14edbfab5c490efa407ba55fa80614bb48ae8eY
+8=\n<-
+.PTS
+<!+/
+#D	h
+pk78
+"E9p
+p8!"(
+/lX`
+#d\p_
+.note.gnu.
+_array
+.text
+.got*
+Biden
+.plt
+.rela
+.dynstr
+.eh_
+Q_hdr
+0ver
+1.roI
+2o_p	
+1-id>
+amic
+.shst|
+1.ro
+b_debug
+7zXZ
+"R@+n
+~hOc
+e<cU
+5{w'
+G`RWb
+Yy/h
+-a7ma
+%3a6
+1rFb
+cRS`
+F/IS
+qiZ6vG
+KVR,
+	Y'z
+)wa	>
+,A"/
+C/YZ
+@(F.
+eweaver
+H3nG
+17IW
+_Unwind_Resume
+OlsEi	
+>fre`
+_catch
+erminatev7
+033_
+p_badbitX
+`_consix
+3end[
+__gxx_personality_v0
+28Bn
+Alog_m
+"10$
+Impl11getI
+/Eva
+Cfrom
+SpecificEM
+?2Mi
+A5__t
+@uctC
+Hcreaa
+6detachEv
+%D1^
+%e_ 
+(12Q
+b1logic4
+#C2r
+.TVO
+poc_sub_c
+Ae10_
+0wai
+punique_
+BINS_
+#17 
+a8condi9
+lvariabw
+%14x
+73se-
+10notifyJ
+pfuture_^
+Jgory'
+n_codeE+
+'?EPiB
+@VN10
+Qxabivk
+eclass_
+?LOG
+$V2a
+#\MP
+#xZ\
+ll+H
+|-#x
+a$4h
+\x4(
+0d60d74c2704ad281e219244514516db8482ef3d
+INITIALIZING WEAVER
+GETCONFIG API ENTRY
+Write
+_THROTTLE
+Incorrect7
+ not defined
+R/1.0/S
+last task
+@comp
+0Suc
+getSlots 
+_:(%d)
++1\-
+8@.#
+(l3"H$d
+-`Ph
+"0	(
+#*`	
+R@H	 
+!L4H
+!h34
+&;@0
+!/bA
+l/ph
+,3gccQ
+ _t$
+Z?.Q>
+vdh|
+a?bM
+Ll7u
+@2m,
+	yj\
+bRi'
+<5ff
+vU@[
+F`&o
+"+jg4
+h2xH\7/
+{uF"
+A*gZ2
+f}49
+k[6.
+r7	Pa
+9-f4
+R,b|
+vCGoG
+NH(BfG>
+,cbv
+#sAf
+71pCC-<c
+	XG*
+,/p(
+_51f41
+>3a0
+v.xiaomi
+@vibrl
+0fea
+pDd@
+;2b>I
+'rM*
+PAPS2
+AL_DEVICE_OUT_MAX
+IN_DUMMY
+vibDurar
+eodm.mm
+.motor_not_support
+num of point %d
+ set external
+Ptrol:"
+osc value
+q= %d.
+@ to 2
+ snd sysf2
+de, will retry
+%d times ..;
+b file g
+Hed no bytes
+IZp %u, id
+	STREAM_HAPTICS_RINGTONE
+ZPvalTi3
+lf ms, sleep
+waveform_id_mappingd
+Qagmde
+/soT
+slide_effect_prot
+effct str
+ max, Usag$
+R, Mod
+aac richtap
+hapticHandleQ
+Get_Ee
+Stream E
+ pause
+ioctl EVIOCRMFF
+Loop exit, should
+Lreached
+eeab78b6096b029f424ab5ce9c2c4ef1249a5cb0
+c89ccddc3b6396de786662badc42594f02ee4957
+WIRED_HEADPH
+KHDMI
+ULTRASOUND_MIC
+ECHO_REF
+8RAW
+LOOPBACK_PLAY	
+ONLY
+wake
+BLUETOOTH_A2DP
+AUX_DIGITAL_1
+HANDSET_VA
+DEEP_BUFFER
+rCAPTURE
+%s%s
+xml parse result ^
+- run
+QTI '
+ing capabilities
+@curvd
+2wa_
+`s_get_
+1%s:
+urmanage
+PCM_S32_LE
+ VO@
+CALL_MUS9
+NON_TUNNEL
+pSENSOR_O
+ODATAS
+TIANTONG_TX
+1al 3^
+%s/%s
+The 
+he event:
+Rlimit
+amplitude: %f&
+`he1.0
+3s, 
+0x%x, lin
+BFrom
+#%d9
+&::&
+!ryl
+1pros
+/sys/bus/i2c/dri
+_s/awinic1
+/2-005a
+/4R@firm
+o24_3LE
+\SPDIF
+\XT_EC
+Saudio
+BMap 
+no_svc:
+Callback
+done.
+heV.a"2S
+Qys_pa~
+v/input/
+dvl:
+/calib
+/redc_stored
+Tinto 
+@ ffa
+no track has<
+` left,
+0typ
+KARAOKE
+#%s0
+"noG
+activate
+turn on vI
+!t:-
+3st.
+! S2
+[TF-VIBRATOR]
+!ret
+Rfrom _
+*%lo
+0Extq
+_cirrus_cal_
+@: z=W
+(%.3f ohms), f0
+2f Hz), q
+rdiff_f0"
+dv_flag
+flush AACT
+cs40l26
+uses mCurrMagn1
+LowPower
+aent f0
+pcustom 
+Cn't .
+Cqcom
+`_id
+Remain %d
+Pfinisn	BMIV1&
+'mi_
+n_algorithm qui
+ was thrown in -fno-`
+@s mo
+K"%s"<
+ FMO
+LBMMODE1
+PeekTo
+0men
+`sys pa
+rfound.
+kernel/snd_card/
+1nv_~
+enough space
+QmSmgrh
+Rull, 
+4sihS
+A688X
+msm CPU SoC IDK
+`.warn.
+pinuous_
+]nsity*
+S/mnt/
+A/vib7
+unordere
+::at: key
+Acrea0
+>USB
+[EAKER]
+GP_RX
+1XMLa	
+0ng_
+	3%lu|
+play
+ap loop
+Aing!G
+RECORD_PROXY
+ EAe
+L_AID
+RENDERER
+5ed 
+P: can
+lra_frequency_hz
+only6
+Bone 
+ period size, 
+insertS	/atA	
++%dD
+CtrlPara
+`2.0
+lRduct.9
+8	0bec
+pstandbyy
+destruct
+wait
+RQueue
+" df
+`hboost
+{ck off 
+f%s%d%s
+Cset_
+C/tmp
+Dump.binN
+dlib64/:
+0wa.
+0lib
+R0=%f
+rietary/mm-
+S/hal/ `k.cpp
+9SCO9
+W_LATENCYX
+3fac-	PUSAGE&
+dconfig=
+EForE
+ %d_
+5e t
+0upd
+.toT
+GNITION
+0HFPa
+	Pedanc
+bfully
+1Typ
+?dis
+AMR_WB_PLUS
+pVI_FEED:
+PATIAL_AUDIO
+Rerica
+QExit.
+_Z22
+4add
+O168/
+BLE_BROADCAST
+Sshort
+transient_sharpn
+ UNSUPPORTED
+DthisO
+1doe
+4man
+out_of_rangeW
+#_regex
+]GENER
+3ASRw
+emerge 
+1Hedm
+fBuffer
+U(%d) 
+!ett
+3nex
+info: (%d/%d)
+Check
+: STATUS_OK == ASY
+C_add
+(vibBinder.get(), inst
+Hr())U
+TCOMMO
+?key
+2opP
+Notif9
+%onc
+CGeneO
+_Rate:
+D2.0 -	
+k.(%s)
+/%dq
+"ge#
+RhandSV
+ZlastH
+}PRESSEDX
+?ACD@
+"AI{
+!p,u
+Bcalel
+ d,J
+EgenBa
+BSine
+Pister
+4Ok,S
+DEDICATE
+_TOUCH
+Long
+([0-9]*)_(.[^_	
+KHz_)?([S|P]	
+r{1,}[.]"
+a_)?RTP
+list
+send
+_to_xlog
+basi
+TRANSCODEV
+CNTEXa
+dunknow_
+Kpcm m
+mL	 v1
+{#Qidx :
+/30e
+dvib->as
+jOFFLOA
+OGAIN!
+4PCMA
+?AWA
+2lib{
+qworks/n
+1s/b
+/ndk/include_cpp/
+_auto_utils.h
+ACCESSOR
+6CPS
+gGlobalf
+E%f, 
+SVC Algo E
+>16_L#
+B.0f
+3Not
+	sinvalid
+3Val
+ /f0O
+5)*ge
+resonant
+prebaked3
+@TELE
+sz <= 0).
+9DVL
+2bad5
+C_new
+_ERROR(
+ %f1
+qpostPKi
+class/leds
+Eetc/
+c.xml
+!#&(*,.02468:;=?ABDFGIKMNPRSUWYZ\^_acdfhiklmopqstuvwxyyz{{||}
+_||{{zyxwvutrqonljigec`^\ZWURPMJHEB?<9630-*'# 
+!#$%'(*+,-./012344556667
+26665544332110//.-,,+*)(''&%$#""! 
+FQY`fkortvxyz
+wvsqnje_WNB4#
+&8GR[chmq
+xwurokf_WL?/
+!%*.26:=ADHKNPSUXZ\]_`ab
+a`_]\ZXUSPNKHDA=:62.*%!
+gb[RH;+
+FR[bhmpsuwxyzzzzyyw
+DLRX^bfiloqst2
+B{{{z3
+sqomjgc_ZTNF=3'
+&2<EMSY
+kmoqrssttttsrqpnljgd`\VPIA7, 
+<ELRW[^adeghijklllmmmmn
+llkkjigfdb_\YTNH@6*
+%,27;>ACEGHIJKKLLM
+LLKKJIHGECA?;83-'
+!"" 
+#*/37:<>?@AAAA@?><:73/)#
+9=@CGJLORTVT
+^][YWUSQNK
+%+06;@EJOSX\`dgknqsvxy{|}
+@|{yx
+*XS@
+pEOW^dhl
+?wyz
+hc]VMC7(
+!(.5;AGMRW\aeimpsvxz|}&
+wtrnkgc^YTr
+CMU[_aa`]YRI=-
+*5?IRZbiotx{}~~}{xtnhaYQG>3(
+ /GZgpvz|~
+~}zwrj^M4
+)058:<==>>>>?
+=<;962,"
+!&,1
+QNRW[_
+ zywuspnkhda]YUQLHC>94/*$
+ %+05:?DIMRVZ^behI
+hea^ZVQMID?:50+% 
+ '-39?EJOT
+zxvtqmjfb^YTOJE?93-' 
+"&+/48<?
+NQSVX[\^`abc
+0ba`=
+$VTQNKGD@<840+'"
+")/6<BHMSX]a
+(y{M
+qnjfb]YSNIC=60*#
+"$&)+-/135u
+TBCDDE
+@DDCB
+=;:86531/-+)&$"
+"$'),.03579:<=
+=<:86420.
+#'+H	
+DGJMPSVY\_ad`
+5{{|
+qomkifda_\YVSPMJGD@=962.+'#
+ !"##$%%&&'
+0&&%l
+_^\ZXVTQOLIFC?<851-)%!
+>BEHLOQTVY~
+1\[Y
+AHEB>D
+#).38=BGKPTD
+jmpruwyz|}E
+ifc_[WSOJFA<72-'"
+6"#$
+L8@L
+5@i^
+$w3@
+4K3@GF
+f2@.
+0@#	
+V0@A
+R#0@S
+v#^d
+,@j]
+,@r$e
+ )@b
+(@_n
+$@Q 
+"#@g
+E>J @t
+@TK&
+3z^m
+?lB>
+?Q'\l
+>cxk
+@c[d
+@rXu
+,Jla@
+80^_
+-0LK
+df_[
+<P_W
+.p!F
+	=	j
+8	",
+tV(6
+#oH 
+ t p{
+#o|!
+(	V(
+%&@L
++PX3/
+<=_,!
+"ox;
+7[|<
+(AUC
+|A_F
+/g(A
+AC9(
+hkJtq@
+?k78
+-AFL
+"szx
+/Sox
+"5xx
+$9h,
+&!-8
+*y<l
+R)q@
+b# 9(
+R 9('
+('	T
+Q"9i
+ %@V
+ #s-
+a# 9i
+C"9h
+#Z9(-
+A#Y9
+${~\
+x	"(
+9(q@
+ {,l
+@]9h
+@[9(
+@[9h
+1@&}
+0\9h
+.],|B
+pT@9
+Tjl4
+(+@9
+^4?@
+(/@9
+x>!d6 
+80.	
+DRmA
+/h&X
+B	k 
+"	7T8
+@y(p
+ =xx
+W"IwP
+a^Js
+!(2D
+*w<P@
+B|U&
+ U`*
+!K9!("
+@)K9
+T&@x
+u$	 
+u8'2
+0Z!=u
+o|ZFC
+C|Z&
+=e&X
+{sl"
+!D*l
+"[Xp
+R`8 !
+`HhR
+!T=(
+hRA9
+4P*1
+!<3x
+!@2l
+k01N9P
+.biR
+qp `
+,*Rp$
+! pk
+@	1@
+,.Go,
+ YG(
+h	5.
+,*^n\	O
+$' (G
+/je$
+H.nk
+7.;k
+5/rj
+.@jd
+4b3i
+4#H7(.
+	!@)`
+	$6@
+T,%C
+a,&!
+P&@-h
+p8P!A`
+bBA`
+-T+q=
+[D3}~
+0P !
+\+!{x
+L 30#M
+&8}(
+fd+L
+t+Dh
+rh|(
+\Gp@
+	iC)
+q	!B)4
+{T0@K
+')c 
+*(cp
+|	?/
+?.;a`
+?/5`
+l	T3
+VeA)
+YqA)[
+C0s@
+x5/}
+(s^h
+/*UT
+"(RT
+1){|
+z?s@
+$D<	
+\\%@
+\$U`
+	/*7X
+zu4J
+%P6t7
+Ul7^
+sd71
+		(	!
+SPgB
+R5[D
+d`"0[P3
+ISA9_%
+HSA9
+38]1
+ T8$r
+NB\e
+WC(5 
+09	 
+%H3\
+dK9H
+4h^?
+ r!GX
+qPC@
+^ SZPt
+Y`wA
++$Y0
+;POJ
+c@ag
+Q|	@
+*"dl
+CbLF
+Pi"N?Hr!I
+d8"E
+$Db:1
+_(tW
+l %K 
+xp@`
+JA9h
+`*$n&	
+P}aC
+\m"~Vh
+"9Vt
+9$p	
+4u!!
+"?Up
+!~ L
+	GH:
+!{Ux
+D}"hU,4
+Tx$(
+'*LX
+LJ"USl
+PL@z2
+z`01
+4,X 
+	l^ @
+`\.!
+ 2Q,
+@8	 
+,",T
+PK!@
+iLrPyw
+T' @
+0a )
+4%@b
+S(yw
+,0y7
+X2!	
+"@)	 D
+E/^P
+'@M,
+!(N88
+"jL 
+,L8l
+!l/P
+T-1|(
+Klq4
+L60[
+4k78H
+`E@#@
+3 ;G
+j<8	
+uP	@
+tcA9
+AK8&
+d5@nH
+"sI|
+0&lI
+#3oH
+0&YI
+0FeI
+4/VG
+"mG$
+!x;c
+"NGt
+(1"i
+(	TB#
+6S@;
+6" F
+/HIL%
+"4ID
+j38t4
+EXH"
+D5b?
+X+0|
+8B")
+|.@?
+. @9
+Bt`@9
+Q	%T
+!A	p)
+qa*T
+T!}@
+_:}@
+rO $R
+_{}@
+'k?|
+ `A\m!6
+?(PP
+!$A`
+)`A9	
+6	@@9
+.:?`
+Y/:>p$
+T'Q!
+9jrA9
+RA9	
+*X?0
+H2P#
+S	,G
+r=`(
+PkA@9
+lybT
+h|gp
+ @|3
+tS@i
+DU}	
+*"';
+l^02@y
+q`1b
+	k"t
+q!	8
+.3:8
+7H8>
+Xd#s
+:+y(
+P; *
+/h*8w
+@	(@
+&q5)
+>A!iw8
+|>PQ
+GQ*}
+fo]6
+W8\%@
+)@#p
+#u2|
+ ^8`
+5k ,
+^8i/
+@9,P0
+z@Hg
+BAyuD
+BAy+	
+i -0
+FAy@
+}PW@
+ k	dO`h
+c6H~i
+l9 @9
+@_ B
++$?2
+x=@I
+@:#	
+rt$a
+q,,'@I
+0#R	
+` &*
+B9 p
+	aA9`2
+l)qc@9
+.i.|_
+3P"0
+$H2J
+v>x"
+Xx I
+aT9	-
+$b-(l
+vp;"?
+<)"/
+D<)/
+D<)&'V,<)/
+D<)&/D,<)L/
+D<)&/
+,<)t
+i*<)o
+<\	q)
+/H*i(
+\/	4
+RP(#@
+RO(#
+@Ki)
+)D1@
+0U @9
+T\]Q 
+hb@9
+ :@w
+h$d 
+$d&>
+Tib@9
+X\"y)
+|_" 
+T7E+
+h=$@
+(J"(
+Rb@9
+d	*s
+@9xb
+X7x6
+2@y O 
+6i"4aPj
+8@hb
+@j @
+:@jb
+0A@9 
+Po@h
+ibA9
+	0X0yj
+?,JP
+!Bp`
+`"$(
+a^c@
+Oda0S@
+`a _}
+pa1[@
+@IQE
+b!yl
+xf@"
+HtdA)
+i #@
+?40w
+XhR@
+i*x"
+i#t"
+"j"d
+#z(k2?
+3z(k
+#D )
+Tv&A
+P-"t$
+p E! (#
+DF`z
+TG i
+ \2"
+gE0U
+p.aL@
+(~ 	
+"C#<2
+BRB@9
+9)ah
+"_}4
+0"Ja4
+b,y.
+,+0"
+@8)Hep]
+"XN"0
+	KI%
+,Y"'
+5pF@4
+j485
+,]	A
+5`r|&
+&uvh
+	b `
+0B4@
+pb)@
+P""@
+0bOh
+P"S@
+"hPh
+Ft+P
+B,^@
+(4@	
+H+"hRp
+`	4@
+@D@*
+Tx"G
+@&T;1
+40@v
+Y2h:@\5
+L?  
+qk"K) 
+`5h"
+	@m#
+"Cx7
+Dma(a
+`:0Q
+@*	@
+>Kh*
+TIii8
+P	$@
+H]Nh
+h#Q*`
+%(4(
+%p*@
+B41(
+Tii8h
+H*@m
+!!F<H
+Uii8
+B  H
+I .F
+B|:8
+d11	
+<(")
+X50*
+-0it
++2))
+! .p
+^|]b
+/jcP
+Tc"@
+bL# @
+$@/JC
+$/IC
+u@*l
+!@9*l
+ (`H
+i38(
+"x| A
+i 9#,
+|"`*
+t5"q
+9Ia@
+	x-"`
+D:"t
+]BI?
+cd.`
+h`"`
+V@K@
+DL/0
+8z1h2@<
+*@+@
+P|5"
+ / B
+OFD{
+#@pP
+/<.h
+/(=0
+/8>0
+#X?`
+" b 
+="x+x
+#`-8
+2!5w 2
+.note.gnu.property
+.init_array
+.text
+.got*
+android.iden
+.plt
+.rela
+.dynstr
+.eh_frame_hdr
+version_rh
+terp
+.dataA
+1.roI
+Bhash3
+o_paddingt
+build-id>
+amic
+.shstrtab
+b_debug
+7zX@0
+*UJ4*
+yx"Y
+GUh^
+Z=sU`
+%0d{.~+
+,#+h
+v.h^
+ve{+
+B9%hk
+	^rQ3:u
+c8&>
+c+=4
+8M$%
+_"NT$
+ R[O
+C-Xn
+LM	S
+\+6f
+) M_n
+j{;v
+~ dY
+2[=6
+GC~'%
+@'/h
+v"S'_
+fPTm
+e,Vc
+e>U\%
+H-Min
+Rtio
+S/3<
+DA6/
+$C??
+l psG
+1mu6`d1	
+Sdb;
+Bft%
+1;}4
+fL+|m
+|<>X
+_[rt
+E{3s
+^ua:
+W\-O
+;-u;o]Cy3&a
+kRkX
+P\b	
+b:;_-~
+b61Vo
++i$T|
+abyBu
+9:Is
+|^Ua
+'C9o
+U6?Q
+o19<b+
+'9k\
+/?UY
+3C05
+%CJE
+_(8f*
+	YwG
+:dWE
+?-ni
+~bXl
+#Yg%MH
+w8=2X=L
+CVzg
+p!.2
+1Sl<
+1`pv
+!QX4Gs
+*L/YZ
+/system/bin/linker64x
+/g	0
+yh1#R
+$@W*#
+__libc_init
+__cxa_atex
+ZN4aidl7a
+8hardware8vibrator17IV
+Callback4hashE
+_ZGV>
+u6vendor2
+$153
+feature12;
+=Exts
+TVNSt3__120__shared_ptr_pointerIPN3ndk13S
+RefBaseENS_10.
+yIS2_E27A
+default_delete"
+`9alloc
+guard_acquire
+12basic_stringIc}
+1char_traitsIcW
+YED2EvX
+release
+ABinderProcess_setThreadPoolMax
+Count
+Extension
+4base10LogMessageC1EPKcjNS0_11LogSeverityES3_i:
+6streamEv&
+_log_pri
+ServiceManager_add
+7tar
+_Znwm%
+Ijoin$
+pp_verbose_abort
+strle!
+FdlPv>
+decStrong
+_ssert
+-p6appendv
+sentryC1ERS3_>
+$"D1
+P8ios_
+6getlocEvX
++le2
+9use_facetER5
+12id
+5clearEj
+`weak_c
+414_
+X4lock
+11__call_onceERVmPvPFv
+T3__ge
+rERKSt9type_info7
+{promote
+6new
+d5mutex
+66un
+10descripV
+:IcE
+	19piecewise_constructE
+__errno
+ioctl
+close
+2soc"
+propertyF
+3boo%
+7MiEventC18
+6putIntERK
+/Ei_
+Q9putSJ
+0;S9_d
+pSight9s
+time
+usleep
+xmlInitParser
+ReadFile
+DocGetRootElement
+QStrcm9
+NodeGetContent
+2tol
+pFreeDoc
+sCleanupg
+50Bn
+ dl*
+dlsym
+int32
+AStatus_fromExceptionCode
+o_paramy
+73Bn:
+`19getI\
+0VerT
+?EPiG
+r2create[
+/EvS
+A_vsn
+f_chk
+sscanf
+atoi
+Pfgets^
+`str
+ArrorW
+__write
+0mem
+2cpy
+EPKv
+freeX
+`__next
+OmeEm
+14sp_report_raceEv
+stdout2
+0endQ
+Vempty:
+6__owns_one
+l_anchor_multilin&
+15__word_boundaryf
+h2regexg
+lookahead2
+23__match_any_but
+_icaseb
+Acoll<
+O_ref
+'187
+bracket_expres
+egin_marked_subC
+2two
+.sI#
+1eat
+oaltern
+0nonm
+* aS$
+Q4stofX
+	EPm
+fseek
+ftell
+rewind
+2xec
+X4nameq
+"200
+'hr`
+Dlass&
+1pcm
+0is_	
+2ms_
+xdestroy}
+92Eb
+ 11$
+!ng#
+^daPv
+@3runf
+requestExit?
+!10j
+UToRun
+pure_virtualZ
+v0_n24_
+10onFirstRef"
+r5onLast,
+T20onIT
+0Att
+OedEj/
+"13X
+_dattr
+.unS
+;dwaX
+jsignal
+LisOk
+10frameworks13sensors
+4V1_014IS
+S10get
+7details13retur
+OusD2
+TQueue
+414i
+dChainE
+Pfunct
+hidl_vecINS6_11
+.z5debugEw
+Rhandlk
+/@2getc
+arrayIhLm32EJ
+21setHALIk
+1linkToDeath
+H2spI
+p_recipi
+?EEm~
+.$4p
+OInfo
+notifySysV
+sChanged
+1?3un
+/1_*
+xsystem_c
+	Qmove
+P_fail
+aauxval
+!sep	
+liblog.so
+LIBLOG
+3ndk
+BINDER_NDK
+@m.so
+#dl	
+ccutils
+chelper
+tinyalsa
+-V1-ndk_platfor
+ isd
+O@1.0
+C@2.0V
+Ppalclc
+Dxml2@
+0707010004940d000081ed0
+_2d330
+odm/bin/m	
+.kernel.pos
+Ut-sun
+6_2.sh
+# Copyr
+# (c) 2020-2024 Qualcomm Technologies, Inc.
+# All R6
+@s Re
+1ed.M
+nfidential and Proprietary -T
+09-2012, 2014
+9, The Linux F
+@Redi
+ bu)
+use in source
+0bin
+s, with or
+# modificl
+, are permitted provided that the following 
+pmet:
+Ds of
+code must r
+@abov
+ce, this listI
+disclaimer.
+produce
+6docn
+/or other materials
+1Nei:
+E nor
+0its
+ors may be us
+!o +
+ se;
+ts derived \
+@soft
+P specn
+@ pri
+>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+2ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,w
+ OF MERCHANTABILITY, FITNk
+	FOR A PARTICULAR PURPOSE
+# NON-INFRINGEMENT 
+DISCLAIMED.  IN NO EV
+[SHALL
+OWNER OR
+BE LIABLE
+`DIRECT
+CIDENTAL, SPECIAL,
+# EXEMPLARY, ORV
+SEQUENTIAL DAMAGES (-
+1CUR
+SUBSTITUTE GOOD
+SERVICES; LOSH
+USE, DATA{
+pFITS;
+ABUSIT
+INTERRUPTION) HOWEVER CAUSED
+0ORYW
+pWHETHERZ
+gSTRICT)
+GTORT
+ NEGLIGENCEq
+WISE) ARIS#
+`WAY OU
+0 IF
+0DVI
+RPOSSI
+#CHy
+rev=`cat /sys/de
+s/soc0/revi
+gure RT %
+Long running
+task detec{
+2finQ
+ Polidah
+`builds
+1Set<
+phrottleP
+50ms more
+:n lo
+	065%
+Piod.
+@_rt_Z
+_ms=1200
+sched
+/ $8
+n + 50`9
+@ \* L	
+/_m7
+necho $<
+ > /proc
+if [ -d.
+pwalt ];
+	# ct
+maximum f2
+ncy when CPU
+	@ly h
+2147483647 >h
+@max_U
+D golc
+;4 >;
+@/cpu
+0/core_ctl/min_cpus9
+/60:
+busy_up_%
+/10B
+0off
+Eay_m
+q0 0 1 1
+Ueferr
+O0xFFA
+1rru
+U_maskB
+/00B
+!_isfitI
+&oassist
+/3FB
+oenable7
+Single Boost 
+3sbtP
+;owsO
+Ab.L %
+Guler
+/95T
+upmigrat
+CBy s~
+egroup K
+	Q0, co
+/d.&
+@_rotZ
+1bigv	
+5_nsF
+/558
+reresis_
+.95<
+?pct	
+idle_enough
+ ed3
+Vearly
+0 tu
+^:0:2}b
+@\( 1
+ \) \/ $
+R Gold
+0ipe
+/56R
+@low 
+b which
+PitizeI
+ activit7
+Clow_i
+Blarg
+smedium 
+different smart=
+ ipc reasoe
+!0/b
+B/ipcF
+Ulevel
+@5136V
+Turn off?
+SinputJ
+$rev == "1.0" ] ||
+	elseP
+9*fiJ
+MIUI ADD: PerL
+Qance_@
+o284160
+powerkey_
+?152
+?vol
+/60?
+	&30
+ moM
+S/perf
+policy0/scalX
+Pgover
+Plimit
+$/upH
+/pl:
+@gpu 
+1pwr#
++Q/kgsl
+Y-3d0/1
+$_78720(
+9rtg/
+_13440
+yhispeedK
+_23808
+w~/?dogW
+B_min
+Bpelt|4`plier
+?844
+3"0:
+"6:T
+Rdata/
+$d/w$
+(max) by J
+N2!mpn
+2ev/"
+) gr
+bus-dcvs
+bus_	
+5/hwX
+BdoneQ
+jllccbwQ
+LLCC/*bwmon- 
+5340 8132 9155 12298 14236 16265 18478"x
+/mbps_zone
+@samp
+4cen
+(70;
+0!abM
+ hi|
+Temory9
+Ulengt
+E ba
+7&bp5
+I8060!
+A"101
+!+KloorD
+$25x
+/ipm_ceilP
+0qos6
+DDRQOS/*P
+?ddrP
+O1500&
+D_mhzP
+Q/mem_
+qcom_lpm/
+#ae log r
+0 as}#
+P=`get
+@.sil>-
+!<: "$E
+" in
+	"1")}
+o	;;
+sesac
+>-@.par
+O40fa
+prepdecrypt
+#!/s
+}* beN
+Avari
+ shouldn't ne
+# unless you want$&
+4p someth
+SCRIPTNAME="
+LOGFILE=/tmp/rec
+ay.log
+Override
+Qosver|
+2 "o
+Crigg
+check_
+e() {
+4=$(,
+Y-z "$9
+SETPATCH_OVERRIDE=fa+
+0tru
+{LD 2 "&
+`flag f
+	'."G
+TWRP value
+PLATFORM_VERSION
+SECURITY_^
+1ro.t(
+@secu
+ will get
+/ pe
+`ely if!
+&Qblank
+(As. T.
+sreflectR.
+'s Board
+ A.mk
+_twrp="99.87.36"
+2099-12-31"
+DEFAULT_LOGLEVEL=1
+# 0 ErrD.
+only
+!InL
+3# 2
+ging
+CUSTOMd
+)R(Kn "$:
+^BOSE=&
+0!s:
+!SuqF
+Unknown en
+`Temp M
+ FailureN
+X; 1 =M
+W; 2 =M
+A0 | 
+BLOG_a
+@1 | OL
+A2 | 
+TDEBUG%
+tUNKNOWN
+0 -g
+%"$J
+::$2" >>"$
+p#!thz
+@$1..
+blobs=$(find
+@ f -
+u'{}' \;I
+0		f
+10=$(
+1""$+
+2t="^
+ 		1
+4's|
+3 >"J
+chmod 755 
+ $183
+p# KeyMi
+napshots
++OS^
+2ies
+,1it 
+R`s.  St
+A aftT
+8ose8
+0hav
+ en 
+2Pe curE
+nstalled ROM.H
+keystore2 makes i
+@goti
+ized HAL.
+#o_,8
+!paA 
+:A dim
+0rec
+Q stoc
+`t imag1
+5AVB{
+`keeps 	
+`across!
+${suffix}"m
+2=$(:;
+| awk '/com.H9
+4os_|
+@{getA!!; 
+ ; WD4}')l
+#	$7
+@_bin
+F1 "S 
++: 4
+q		P
++: 8
+keymint-qt
+bfinish
+P" = "
+-"$A
+!umS
+"$TEMPSYS"u
+  0-
+ZrmdirA
+MNT_VENDOR
+!VEI
+,fi$
+G: 1
+@comp
+N2. D
+ ru_
+0rep
+	E=" />
+kPROP")
+9: $O
+No $3. C
+rriginal$
+$$3e
+0$4_P
+>=$2*
+l0 $3#
+n"$4" "K
+/fiH
+Rsts! I
+rdynamic
+1[ !
+O" &&*
+A@! un
+1sdk
+9fily
+P(FBE)
+4ull;
+6DE)
+Afast
+`cmdlin
+Askip;Pcramfs_N
+?=ed.
+@Fall
+Rls -Ap	!2>
+Lnullv
+R$2 al
+W@d atf
+#to1
+. tL
+P-o ro7
+!$2U
+	Gsdk)
+7SDKJ
+H	)ltH	
+dLegacy
+0ven
+6lib
+lib"
+	abi
+.cpu.abi)
+"2abi
+"1*64
+<64"
+64-bit. Vx
+1lib6
+/32O
+2 "$(
+QSEEComAPI.so
+2ab_
+2ab_
+4A/Bb
+A! Fif\
+/uf@
+?rec
+6has|
+@-in-
+#fi:
+^#&fi
+6" "
+?" "_
+>" o
+A tre1
+0Ore
+QBUILD
+0=/s]
+1Try 
+ /ys}
+Q=/v
+" "0
+%/$r
+-i -m 1 'ro
+| cut -f2 -d'=' -s)
+?"s/
+/.*"
+ful! New
+3 un
+`Nougat
+o Skipp
+	/SA
+T:0as-
+	Adoes
+# OPlus/ColorOS pt
+s publisP+Air f
+my_manifest
+, e q-
+	"'sh
+c+!ofY#
+/"he
+@SPL.
+*fi+
+/osS
+O1070
+AStouch
+G<$64
+Or22b
+7171670@
+	GNU
+Jmain
+(7155654,	
+ r399163b1) clangdA
+5 (https://
+> gouE
+.com/toolcha
+lvm-proj
+87f1315dfbea7c137aa2e6d362dbb457e388158d)
+U: LLDv
+tbot/src|
+H/outs
+.pre'
+text
+.got
+U.note
+P.plt
+@bss
+A.eh_)z
+_hdr
+.gnu
+D-id
+.sht
+/abX
+O0eed
+3nt-
+:!shxR
+zyeuto-se
+O SKUf
+Pku)
+"Xiaomi 15"H3
+<-="
+- .s
+tee -a "$Z
+# H"e
+c^%e 
+eodm.mm
+.audio_hapt
+!upV 
+resonant_
+slide_effecO
+!ys?J
+4q"dada")
+?;El="$<
+?_151
+Py_off
+O"111%
+display.
+pSspr ",
+ "170" "35"
+R "agmB
+"ha~N
+ocirrus
+@lowP
+/i2c/driv
+cs40l26/0-0043
+oxuanyu
+_Ultra
+he1.0 "mix
+$: h
+x, applyhF	r
+ (SM8750)
+"oCommon
+/usb_gadget/g1/
+Qs/0x409/
+4usb
+?0-p [
+?otg
+"=(J
+)/ex!
+^8"${P
+Q[@]}"-X
+	"pp -rf /
+X!-R
+q_copied`
+<etcx
+/a4|
+?105{
+Q!.s
+Pbox.r0
+/hwc
+!r {/
+env LD_LIBRAR
+a)H 
+A/hw:
+@clab/$4:r:
+?0eft
+eweaverO
+ drmrpc
+_ -c /W
+0onea^
+oze_analys
+BuhidM}
+qapabili`
+SYS_NICE
+ io]
+_ rt 4!
+O13fb
+3-fs?
+_0666 ~
+P/lra_\t
+PimpedGz
+7mnt
+@/reg
+0sns
+?_hzZ
+aw86224
+cawinic;
+/2-005a/f0_saveJ
+0?oscK
+custom_wavU
+ASI H$
+_ 6887
+4sihj
+A688Xf
+.6bA
+y-o2 to
+kPwe ca
+Padvan
+ow muchs
+dCIRRUS
+:U1dc_
+C/f0_
+  0x
+Jay:sys.
+m"d=
+ uer
+A(sub
+LICENSES TO
+pY'S PAT
+@S AR
+$IS<
+VM's
+firm
+*C/vm-
+dUI VM
+%l_B
+ ,g6
+vm_loader@f3@ 
+"/tg
+Uvm.md
+/vmmgr -r"
+R?b00
+"1gh-
+'Se-vm-
+/EM.
+:+80
+?oem*
+4sub@l#i_
+"  r
+0aphK)
+BntagD
+0fm-
+w.xp1
+@MoniT:PHang	4
+?216X4
+b4"1xmlDK
+o/KM300
+>0="8?
+R<hal 
+!</(
+D>3</
+!fq.
+#</!
+O/hal
+l Re!
+RlyPror
+edComponent
+_secre
+D/mm-Q
+/0fT= 
+_10ae8
+ShalesfZ
+#<eDU
+* @TY"
+#|L8
+ 7>W
+hVrq
+;w(@D
+(qvK7?dw
+110Wr
+`Impl11
+	3s_i
+_FlagE
+Crchr
+PTrans
+8GetSlotsER8
+4Mv%Ej
+!6vS& Ih
+0R12/
+ORespd
+<S6_A
+66De=
+2se5omapi22IS
+~Listene
+>nel
+2/Id
+BOpen'
+?S4_0
+8javacard14O
+_CmdER
+39is
+1se.
+2e_e
+PS2+
+%s::%d %s
+: FAILED
+EonseO
+y7ULLF
+Invalid 
+DNot 
+flaize K
+l (%u)
+aTotal 
+zA was
+9d-fno-e
+8Pmessa-
+@%s"
+: Cannot
+P1/P2
+out_of_rX
+/stQ"
+R.cpp
+894069bcfe4f35ceb2088278ddf87c83adee8014
+bntry
+HROTTING_ENABi
+@NCORE9H_KEY
+`too sh
+,\}#
+% H0
+$0Lp
+h[|!	 
+("_$4
+cp3\
+)@6\
+&avP
+%80(
++!hx
+#Ad|
+ $6l
+J!BD
+/%BD
+	&p)h
+!n@D
+&p),
+'T	P
+RO	 		
+&1	d
+h)8)
+%h+X PD
+%(8p
+	D1*
+%\*l
+X7O`
+. '8
+ " <
+<(C*
+-|/|
+-L0d
+L9 X
+TKim8
+.note.gnu.property
+.init_array
+.fini
+text
+.got6
+Biden
+.plt
+.rela
+.dynstr
+.eh_f
+Q_hdr
+0ver
+.data9
+1.roA
+o_paddingl
+build-id>
+amic
+.shstrtab
+a_debug
+7zXZ
+Yl.2
+o{	0
+B))=
+w,d'
+sk_}
+OjV$3`%
+xJoL
+?A/YZg
+ C*<
+07070100049425000081a40
+_808f0
+0odm
+264/[
+/+,x
+/HB@
+/PO0
+"U"`
+"V=0
+#;-0
+"s&0
+#\,`
+#t@8
+"aM@
+*XJh
+*(@p
+"DTx
+@@ @
+A?)0"
+'wTQ
+]-zj$
+R>m&
+125f
+ 	+?
+TGck;&>
+pZ(^V
+ZL?U
+PH &
+lc<}e
+lsED
+it;Y
+__cxa_finalize
+atexit
+_ZN7
+(8javacard13CborConverter17addAttestationKeyERN6cppbor5A
+ERKNSt3__18op$
+alIN4aidl7
+8hardware8securityw
++14\
+3addINS_4BstrEEERS0_OT_
+6addKeypay2Oters
+6vector
+T2KeyPY
+ENS5_9allocaF
+OSC_E
+J3Map
+5jRj!
+OOT0_M
+/RjG
+HhNS2
+>RKj
+21getKeyCharacteristics
+10unique_ptrI?
+`4ItemE
+14default_deleteIS5
+4pairIRKb
+_SB_EE
+9getUint64
+CertificateChaino
+XAByte
+?Vecw
+0getTextStr
+SharedSecretP
+]^25add
+3112sZ
+/22h
+?S0_K
+TimeStampToken
+eclock14P
+S0addH
+OAuth
+LA2getV
+W?Mapr
+decodeDataE,	
+0Err
+7details8make:
+$S_b
+/T_c
+`__tree9
+12__value_typeIj,
+ EE$
+c9__map(
+compareIjS4_z
+@less
+2Lb1/
+25__emplace_
+_argsIjJ
+_21piecewisa
+?`uct_tE!
+tupleIJOj_
+BG_IJ
+T_iter{
+Anode
+vEElEEbEERKT_Dpp
+b012_
+d_equalI
+_baseIPv
+3end
+g'6_
+"de`
+b9_ISN_R
+IKeyMintOper
+~	/GVF
+nDevice
+813Ih
+7nullopt
+R14in_
+indexILm7EE!
+guard_acquirel
+2basic_stringIc
+char_traitsIc
+91EvX
+release
+8km_utils12km
+2AidlERK21#
+Qaster
+-06__ML
+EPKcm
+strlenS
+libcpp_verbose_abor.
+_ZnwmSt11align
+pure_virtual
+_ZdlPv/
+10LogMessageC1o
+jNS0_11LogSeve3
+_ES3_i:
+6streamE`
+wassert2P
+sentryC1ERS3_>
+3 mcJ
+8locg
+$le|
+9use_facetERz
+92id
+5clearEj
+8KS5	
+5parseEPKhS1
+4NintC1El
+10headerSizeEm
+02enb
+MajorTypeEmPhPKh.
+@func
+0IFv
+!5c#
+#cER
++TV9
+321J
+HwInfoEP
+K@1genN	>eKe;
+oResult
+RngEntropy
+9import?
+aFormatI
+O8_Ih`
+`Wrappe
+3SB_
+$7_w
+/llK
+cRS9_SC
+28sendBeginI
+?Cmd
+oFinish
+72SH_
+/ll:
+0upgrade5
+OPS9_
+AllKeysEv-
+/Id[
+2 5b6
+ourpose.
+7!2d
+LockedEb`&
+4earlyBootEnded
+="8cg
+`Storag
+ToEphemeral
+23getRootOfTrustChallengeEPl
+_hLm16
+12IS
+*/TVi
+`12SeriC+4abl
+20__
+_pointerIPN3ndk13
+rRefBase
+yIS2_E27A
+ 2_%
+Element11=
+requestE\
+9ShouldLogE
+/EvB
+0PenL^SEventO
+h23setDF
+Y4setEs
+0dup_bufferEPKvm
+#_kO	T_14TK%
+zBlobI20d
+ablob_t
+V0_I16
+R8_S7_T
+Aoriz
+zSetEP22T
+__tS7_
+5Set
+[set_t
+:5Bn
+`?EPiT
+* 2c
+0aassign6
+AStatus_newOk
+0Uerrno
+pfromSer
+@Spec
+))D2
+weak_couB
+free
+ aP;
+0memm
+Qchk
+<8Bn'
+call_onceERVmPvPFv
+T3__gec
+Pt9typ
+zpromote
+Tmutex
+decStrong
+66un!
+1TAG_PURPOSEE
+ASN1_INTEGER_i,
+ALGORITHME
+KEY_SIZE
+BLOCK_MOD
+DIGESTE
+|ADDINGE
+CALLER_NONC
+NNULL
+MIN_MAC_LENGTHQ
+|EC_CURV
+RSA_PUBLIC_EXPONENT(
+OAEP_MGF
+OLLBACK_RESISTANC4
+pARLY_BO
+1?NLY$
+ACTIVE_DATETIMH
+ORIGINATION
+/IR0
+ 250
+_USAGE*
+COUNT_LIMI
+NO_AUTH_REQUIREDE
+"ER'
+OTYPE
+.OUY
+LOW_WHILE_ON_BODY
+rTRUSTEDt
+PRESENCE
+(333
+rCONFIRMM
+~ED_DEVI_
+q_APPLICZ
+3_ID
+OCTET_STRING
+2CRE5
+OS_VERSIONA
+PATCHLEVEL
+RTTEST
+ID_BRAND
+.6T*
+PRODUCTU
+nSERIAL
+OIMEI(
+ANUFACTURER(
+nVENDOR
+hUNIQUE
+PNTITY
+4CONT
+@LEAN.
+pENUMERA
+9updateAad
+$"10
+_ViewEa
+InChunkse
+2popNext
+5!6f
+?PSA
+0Off;
+/D2C
+plyProvi+
+edCompone
+N5Rpc
+?$24
+EcdsaP256
+RirEbPm
+MacedPublic
+OSend
+111E
+oA_RjSB
+0ice
+0Uds
+o$26
+;>SG_
+3Protecte8
+OPSE_
+?29IL
+6/TV
+40__
+0"6_(<
+O30Bn
+OisOkh
+0~7CApduF5
+/9_~
+$8sL	
+/8_)$;
+E$Os
+Patchlevel(
+lVendor,
+OlsEi4
+521isw
+% 19@A8ute
+:4Bn	
+23WaitForP
+6chrono8dur
+pILl1ELl
+;D1Get
+0regO
+@exec
+d$SstoulD)
+EPmi
+__system_	
+memmove
+@tackV&
+_fail
+getauxval#
+Bcpy
+ncmp
+libb
+%0ndk
+~pLIBBIND.$0DK
+3V3-G
+?rkp(
+?-V10
+_external
+fsoft_a
+3S_cert
+4logn
+Trypto
+ nsx
+-dl=
+d_$"
+p auto &
+$::B
+$::C
+#::0
+::get() Q
+[_tag = S
+,QTag::
+,_Mode]
+digest]
+bapplic
+2id_
+Invalid COSE_Mac0 
+Aure
+>R in s
+DLger]
+meid
+Return
+B,1.
+/st/opensource/y
+/3.0/hal/=
+P.cpp
+fied_boot_
+response
+bad_v1
+_access was thrown9
+-fno-exce&
+ks modeV
+NductH
+Qanufa
+ro.arch
+Unkn
+or unused enum tag: Someth
+@s bru1
+TlongI
+sKsWGoogl
+	!. .
+JAth_e
+c with 
+ "%s"
+out/soong/.TH
+mediates/
+gen/includeA
+variant
+exynos9810
+no_auth_rek\!d
+Race de
+sys.$
+9the
+P: a wFC
+w_while_on_body
+t_LPed_us2
+vresence
+C4boxQ
+-impl
+Check 
+ed: fals
+algorithm]
+_time
+os_pj%
+Dmgf_
+aea3745b559d2977f0676952e510fb0547a52140
+rollb
+resistance
+MimeiX
+/od=
+.ofH		
+KA key
+Qpdu s
+*? = 
+oecCurv
+_of_range
+%P' s
+ Rexa
+origin
+$ SZ
+. 3v
+1INI
+ONGBOX r
+active
+7eBfirm\
+74a538630d5d90f732f361a2313cbb69b09eb047
+d8".
+42_ex
+(ir|
+Dl_limit
+brand
+cd55ca9963c6a57fa5f2f120a45c6e0c4fafb423
+h{@0ent
+Od`]
+ec_c
+4out
+Conly
+works/nan
++D/ndk9
+E_cpp8
+qity_cre
+7d14edbfab5c490efa407ba55fa80614bb48ae8
+min_mac_
+roo 	
+U not 3
+3con
+^([0-9]{1,2})(\.
+C4})-
+4\qT
+	D-D
+# H,
+ @L0
+	r8"
+	gL&
+" ',
+"$+D
+" .,
+ h|1
+0o,3
+",4L
+%+'(
+.,GD
+$J(#
+ \K\
+TOp*
+8gDQ
+l("tQp
+LVP(
+$_(T
+"pZ4
+/ _,
+Yx9	
+"\c,
+Wo<i
+ 0jL
+ lp(
+fL)o
+Vmxy
+ u48
+ HK~,
+/h{D
+v	0>o
+@@Tj
+H0So
+d`Kht/
+loP0
+ho,7
+`Gnt8
+/ KD
+Jo<L
+h$)h
+`'~lg
+Tx!n
+`&nHj
+_,%`
+!o u
+ t2t\w
+pK~,x
+FL	"
+s%YP
+/$~,
+TYg(
+``kgX
+T$-	x	
+l\Ft
+\M[t
+X$@n<
+0\|+
+P%	/
+LvH"
+@<mt
+,4o(
+(I~8
+DEapD
+psbF
+"m"H
+/Q(D
+#*`;
+yP)s
+ch!P
+!/E$L
+/6E(
+.sI,
+d	#+
+{Kx	/
+"^L|
+X	bW
+1"1s<
+m0*@
+$KM<)
+Sd(3
+5/un
+0SR#
+7l-n
+_$`.@
+ F&$
+atC!
+t: i
+9`@P
+5<K@
+`U/c
+@[/i
+	j8D
+8DEh
+HDD3
+|96h
+P/2a
+J(SLt
+C4R 
+tlNh"
+4V/,
+*Xg,
++Xg.x
+`45^
+W\!*_
+$T/[
+b-*,
+.'O2
+ .Dj
+ .Oc
+ .	*"
+ ./e
+"Hu-
+Ld"}
+D(	({
+`' 	
+X(.x
+P*\'=
+P*&P
+`@9H
+`o!@
+Du*V
+4m1/r
+d;?!
+<?*k
+Xn/W
+Xn#/
+10n&
+m0n*
+/|m$
+T{0}	
+lm5/
+slm"W
+}lm(/W
+"0m!
+(k.m
+X3*&
+D8"h
+/`$B@
+\*/]	
+toa.v
+(>M	
+TXz"
+kH?"
+d"_c
+	8 	
+\(@O
+pV"5
+4)/p
+4)//
+|4)#
+H%A!4)/
+4)/;
+4)+/}|4)
+,$/2
+4);'-
+|(,'w
+(,'O
+$4),&y
+dwDE
+	O!s
+/7r(
+x}LO
+/6oXb
+C/`n
+/$mL
+.`kX
+/Xh 
+/Hgx
+.}dX
+SAdh
+/yeL
+"dc<
+8f0s
+l%"(	
+h:_9)
+XoEs"
+(V9a
+`D	PRH
+/	@LJ
+7/r]|
+#/T_|
+*b]|
+@/q^
+z8*/]
+H8-@(
+$sZ$8!
+S#MZ D
+X& `fX	
+dX'*3Y
+R`&,
+R`F,
+R`f,
+!M2 tC
+#`W8
+0#1_
+@1!OI
+&pSH3
+*1Rd
+*(R<
+*wQ0	
+&ZQ$	
+"aQt
+"mkh
+|-"zk\
+"BR 
+|a,D
+5/@Q
+k8Z$
+/4	&B
+".Z 
+",Z@
+d/ROp/
+M8F5
+#$M|
+/[NH
+.YiDo
+&|hP
+"aXp
+"b <
+X,.L
+(le0
+"vGd
+ JeX
+lH!#
+&zGt
+-"hH
+#ARp
+.gFH$
+1""E
+t0"T
+>)yG
+}bh"
+$y y
+h`	.&Q|
+FTWO
+	et@
+/+zE
+hb@9
+7H`3
+,r"h
+8J$@
+8""`BH
+&.n?p:
+/A?To
+  ):
+/n=d
+y/$<
+XAay
+sO<E
+\!/A
+"}<@
+!)]l
+ |"+:L+
+O/ru
+!OK9
+/O8X
+h\6 =8
+d-ca
+4<@n8
+=@`8
+["{5
+7LA@
+ FTX
+X?!qN
+d%`57
+ ;Pp'
+"3M,D
+"=M,D
+d#Q\
+V*^6
+0@0S@
+"3O8
+d@C@
+/-@t\
+`e#,
+"R5TJq
+xJ#D
+t]RM
+#D? w
+ahUD+?
+DHb>
+Q.=X
+"\2(
+P"51(
+Pm"(1
+#\>\
+"+1T
+$,3t
+ v28
+*jLD
+#,L(
+"CI,
+t4F"
+$!/g/ "
+Q('"i
+$cQ<
+|D*o/|D"
+\E&+
+C/G/L
+O0H1b
+&pE M"
+	.V-
+O$JO
+$J%/
+l$P,l
+,)DE
+1@Q!
+/qNH
+'.r*P
+"1*P
+*@AP
+$[/GL
+/*})X
+/[(T
+T/u'
+N",'
+T5#s&
+"m&8
+"g&85
+d8	@
+`>"b
+#,#d
+"j"4
++"s<@
+9/*$
+UT>8.
+&i"\
+.M"\
+#d;l
+F#Y9 
+.H!|
+.*K|
+.?!|
+/v!0
+f"a"
+"&AhA
+1Ta@`
+?|W 
+*d</T,
+"4!X
+I"!!
+N"u+
+"X7$
+H+be7
+'xX@
+"t78
+pa"C
+h& E
+ ~7L
+ Z7(^
+706 
+3@|B
+ T7(^
+"_&,
+"]&L
+"[&l
+qDho
+@y'.o
+"8$X
+.C% ~
+/%%<
+,>@W
+",/(
+{I(%/j
+0B"a
+^8Tv
+4$"9
+W#n5@w
+DY1 6
+<Y1ag
+)TV>e
+hj@9H
+hf@9h	
+*"7x
+-P.#
+* 6H
+*b5 W
+"LZ*C
+"'#l*
+A(P 
+hNG+
+xSP"
+(0	@
+ #	P
+#puB
+(R&\
+'0V&
+xT"B
+!_2<L	
+=C7@
+"C*p#b
+(*tN!5
+&,h	x~"
+7kCl
+,A%c.!
+"W#Hp
+ #K 
+*Y0$
+  j") ,
+"Y 0
+T<{@
+<I#O/
+_(Q"X
+`'"e
+D&24
+/R?|5
+_ @7$F
+T	aC
+6 aC
+R"Xsh
+.init_array
+.fini
+text
+.got
+.note.android.pad_segmen
+Biden3
+.plt
+.rela
+.dynstr
+.eh_frame_hdr
+.gnu.version_r
+.data9
+1.roA
+Bhash3
+o_paddingl
+build-id>
+amic
+.shstrtab
+a_debug
+7zXZ
+)7Mw-
+xh*$E>
+\tgt
+F?w2
+b'T'^}cBGC
+j![.
+/m1)
+u_x[
+gtSq
+O%>j
+G2A"
+gTu!9
+:tP:
+qFii
+7k5\
+HQaFEUs[	
+"H^0f
+2],0
+3kX)
+^7S'
+QNvY+
+'eop
+H!SH@
++M7`
+%2lt
+;	RR
+}:Q@
+` ~W
+G0nh	%
+9+zw{
+v'%W
+pMO3T>?
+T#D=
+1[9$
+2]#>$X
+{y9s}
+<S	P
+5u.3
+TMv4
+:+`E
+hEYa
+oR%Lz
+KCt\.
+&-Ef
+DYDM
+bWBz|@
+e-.e@
+<oSg%
+~W"A
+P'cwD
+y3v$
+{3R/
+fA`R
+r_(d
+zXYdC
+C{$b
+!XtQ;
+[fkz
+1Z-H
+.E@{
+Yi<z
+%:f|
+tfX8-
+`+gl.
+2F!:
+S*5'C
+{[I/
+$4,"
+1c=-
+CXPu
+VsCe
+m*a2
+S#w+s
+F%#8M
+D6,9
+[neE
+j.~*
+6Y(6
+Ni3Y
+ybdC
+TaoP
+Bqt#D
+H">M
+>_v8
+Ue^Y
+X[I16oa
+g3"ng
+i4J	L
+I5su
+= 9o
+W$7 
+-wB@
+{pF?Q
++=x5
+}fY>
+?":	b.
+tTcD:
+[]Qq
+V9NG
+_6`v
+ZKS:;'
+l:]a]`
+n=/p
+@jmhh
+ gJK
+0s 5
+ LvF
+EYvB
+8jqd%
+I]n'
+	eur
+S$+Z
+_%O~
+m<-}p=
+Xkw	
+gyRO
+12/|\nB
+"_aBa
+nWBN
+;"*V
+E.5e
+2t6E
+!$*rw
+.3ERU
+A}Hy
+PjiEe
+KsFN
+i]B.0
+#ZL"
+%/!k
+j)86
+@j$:
+$VGZ
+vxX5
+(CG6
+GB]P
+Z{G*
+-hEls
+#&:q
+j3@F
+NrCM
+^$u%>
+su;d0
+2i/x
+e;p%o
+@Y$E
+V^[v
+;&rY
+%;cX
++O=A%
+;{%9
+z[8-]
+SV9S
+hvH}hU
+{UMw
+<T1L
+S9waLP+
+e`q,
+=6Kz
+meyI
+}a`_
+1{ $
+k#r3
+,[7$
+'x^&
+\RE]g
+se>Y{
+G,RC
+,)#s
+d\VLY}R
+'poG
+'z[Wi
+)\{f1Q
+B#2\
+K"*0
+0gR	
+"=d1
+4B#zu
+^`)p
+~8LQ
+w6vnn3q
+R3z]Y5
+X*m?
+7618
+wiAx
+#G5&
+a`AJ
+ql_R
+<atA
+v1r3
+*T(bf
+~dvX
+vJen
+S"AW}
+Yr6 
+EM{#
+=&j*
+9!-OC!j~O
+7,9+c
+AKRRh=
+m`%4
+,?6un
+{6<az
+V!cd
+^vFP
+hFBHh
+k]tfk:
+`(^.
+*{E;f
+$4uk
+[+Rv
+n&b%
+T?	V
+Ht\`y
+uUt; 
+}U(az
+_s-`
+*fWT-
+!p0T_Q
+Q/KdjP-
+AhCi
+..jPM,
+"RG/
+x49/
+\~&Z
+gHtQ
+rIga
+-_d!
+y&>;Gs
+L3Dr8
+A7g&Lu
+*RA'
+<?x1
+|Dql
+B\Va
+.IdT`
+rfH^
++i#>
+`"D.L
+^Oc6
++W`3
+|z|&I
+o^AfU_
+Km=9
+~;^yF7
+{Va&3
+dd3QA
+l2DC$
+<Xz"s
+XN]T
+A[pZO
+vpP9
+]3mk
+Xwi9E
+.0Vb
+8X|6
+qL$g
+*Q]C\
+&>J4}
+|]uW#
+BA1D`
+tv/{
+<cHE
+K]1$2
+MiiS/.
+gfz^
+yFsu!
+YB<-
+Q[Mz!
+i\LY
+g=n+
++DuX
+vB7g
+:0+8k
+1VuS#
+%G?o?
+`GJ	4
+sg&R
+oSHT
+~@=6
+VS_{
+(Bnp
+k3lh
+_n)q
+]>`!k
++8;s
+,`7N
+6wsv
+QG!N
+f,7oD
++vVdY
+^(ct$
+ZNt_
+9/XA
+az,W
+7,k~[M
+(}5\&9!
+dCvq
+)855u
+Jom#	
+$;Z]
+H-\Q1
+(0+5
+DL4-
+AG"s
+qqaY
+;%op
+wjj*
+)sF?
+HMjU]k
+HSMy
+M'Z_2
+s)(h
+#lo@{|
+B.|	|
+`zON
+>Ruv
+uTZ1
+>1:l
+c _Uy
+G'?(
+0&#N<
+]NB6q
+cxyTZ
+@fmx,
+E1[l
+L?F}_
+Xvp&c?
+-[cG
+/+T[
+^1K%
+D\5<
+pYDx
+<@AZ
+Gs5 
+r,6uo^
++v9yT
+fQJVS
+/DU`
+bxI\j
+iWD<OS
+9B/:
+DLDqZ
+Z_])
+eV&o4
+7\-g
+9SDC
+`39kg
+XI@?
+`3U97$
+4f0z(O#
+15:=V
+O6.?
+NwIk06
+U0K+
+09GW\3
+'Ni#
+~9jM
+y0g(
+{P@s
+FoQB
+Jiasx@
+6}C}u,
+"F*w
+3B5O
+.'2/7$
+cIOrD
+>oU 
+	-2W
+]KZ[
+;PA$
+fiq"u
+KW%W
+X{.M/
+>f'Be
+q~q|R
+;Cp~
+,4|7;
+{U;P
+dnl0
+yXq"
+=E%Q
+XYH%
+Qc6L
+k(w(
+jJL/
+59IB
+cg~?D
+4ea*
+5V}c(7
+WJ"Nv
+KOFO~&
+j.27!
+EkKO
+	?EX=t
+WS50
+%WRb
+rrw}
+P3+M
+]n"$
+%K%}o
+%pcs
+1;/3
+5|Q9
+xV?6'JW
+:#9(d
+(0aaZ
+(E]7
+6'4}y
+a,('W
+y)i_u
+~v=-hBc
+SZ6~
+Z&F9X
+60z`
+x5C3n
+c]=`
+~ha>
+Q6>V
+nWg3
+Bmj51?
+~Eb,
+Xn&No
+AH~t
+|Q>+
+g1UxU
+SwYkQ,
+x(s"
+LVWa
+qUwX
+}RPaT
+Y8J!K
+a'WJ
+Sm#7
++#d:
+:zy|
+dqWpb$
+g&7;
+;f>%
+-@gV
+h@DO
+GtAW
+Ch7U`
+\}H+
+wA1k
+&9.'
+)IWc
+<X`>
+S""	
+p}t'U
+.\28
+#S]~*
+gG-3
+G5d/
+[EtzG
+6gA7uC
+Y~|__
+Y-lb#
+CZ;C
+jXSab
+i"ih
+YW54rp
+!v~<<
+Qt,;
+Qbif
+CbB,
+GATd
+wt;V*d
+^0T5L
+~&y%h
+xB9W
+"?*y
+F~1]5
+"sAg
+>?	T
+SkLL
+JHiT-?
+_)/i7r
+D[*j6
+ao{i
+~_=$
+IhF&` 
+mF]}L,
+]7{,=H6&
+Vyl:!R nJT
+@mG;o
+\)}tz
+7j.H
+=a.W
+4=R*
+oONg0
+rRg?
+KSuq
+jeQ]
+t_(P
+,J"n
+CO)";
+|S>q
+R<)q
+r{	JL\V
+;F;%
+a/zR
+c0 z
+?n>8
+mq|"4
+5>GO^DR
+;qn7Fg
+TP.<
+cnRUe
+ADMPg
+s`ub
+wVMK=4
+DHeKp|
+0]{"
+P_4X
+1A~+
+)r:oh{
+(bpU
+YrmIl
+@i^U
+jOpc
+^xIG
+N+mB
+|H%]a
+t795
+TB/M
+Q4[tq
+}g:,
+GfBx(tj
+8tIp
+4z+| 
+0GN}
+PED$nKS
+~6n\sf
+ &5Yahq#
+	S"J
+2e)[A
+)1xg
+G}Fh
+LO&z
+h+I+
+(F?>
+NFnk
+t%XV
+,;,u>
+/lxWB
+)4O"
+usqj1k
+\K*L
+jME@M
+tr)d
+Hc?@
+*h&ita
+MWNBC
+8}tc
+yFxm
+'Me(
+[pYMv
+TJU!j
+I:^	
+DwM 
+v,u\
+E1{t
+&T=q
+9]WY
+|)B)
+ .\qc
+K_{WS\
+Cxl<
+&b*j
+j( xD`
+9M#I
+GZgB
+g$f#
+/Y5u
+vW6y9I	>
+vs/\PV
+iXYZqf~
+m925
+m'/f
+a*{U7
+TVhsX
+?SaJ
+?R(f
+yjx,8
+aY:S
+_NZ.A
+3{D	
+P2[Z|_
+he2Lm
+F0ou
+b_XE
+PBBW
+Q"{5
+,R_bz
+6	hf
+IE=ZX8
+ 	 "
+,,lhEvc
+RdcH
+}D;Y;
+Ttk&
+ROLr
+:nB'
+dDl<>
+pp(:
+:MAM^
+-J|$4 
+[R`i?
+W@(y
+>O^%
+B'7'/
+@4"8
+`W+=
+HHm{)
+'9Vpd
+HLBm
+u88 ]
+4Nt;
+l`2J
+gOpF
+XC@r
+/YZo
+07070100049426000081a40
+?e50
+odm/lib64
+jc_keymint_transport-thales.s
+vK7?
+__cxa_finalize
+atexit
+_ZN7/
+8javacard15SocketT?
+14openConnectionEv8
+8sendDataERKNSt3__16vectorIhNS2_9alloca
+EEEERS6_Z
+3reaZ
+o5close
+C11is6
+!ed5
+/TV7
+4base9ShouldLogENS0_11LogSeverityEPKc1
+10LogMessageC1#
+OS3_i:
+6streamEv
+rror
+__errno7
+D1Ev
+inet_pton
+sleep?
+13basic_ok
+IcNS_11char
+itsIcEEElsEi4
+	22__libcpp_verbose_abort
+_Znwm
+_ZdlPv
+6sentryC1ERS3_>
+$"D13
+P8ios_/
+r6getloc
++le2
+9use_facetER
+12id
+5clearEj
+6len"
+5ctypeIcE9
+f4Omapi
+/Ev3
+20internal
+mitApduE8
+0shared_ptrIN4aidlB
+P2se5oK
+20ISecureEle
+ReaderEEE
+Listener4
+/GV:
+~Channelq
+0Ses
+_rvice
+N5Timer13
+21SELECTABLE_AID_THALES-
+_GOOGLu
+8KEYMINT_APPLET1
+?SIZI
+9piecewise_co
+OuctE
+40SE
+60__
+1_po
+IPN3ndk13S
+RefBaseE;
+iS2_E27A
+default_delete"
+guard_acquire
+ostring
+ID2EvX
+~release
+1GetProperty&
+cES9_
+Manager_check
+10fromBinS
+S0SpAI
+5GetBool
+memcmp
+AStatus_isOk
+3getT	
+cStrong
+__assert
+alarm
+_wake_lock
+o3putEc6
+5flushEv
+XnewOk
+PExcep
+SCode
+hsignal
+weak_count14_
+?3Bn
+/C27
+#`19getI
+?EPiK
+!s2create8
+free
+kpromot
+`mutex4
++Ev)
+36unA
+1__call_onceERVmPvPFvJ
+	 3_
+0St9
+q_info
+__system_p`
+@move
+tack_chk_fail
+getauxval
+0set
+Alibb.
+LIBBINDER
+I_ndk
+P_NDK
+0.so
+0log
+1se.
+B-V1-K
+hardware
+s_legacy
+3c++
+#dl	
+APS2$
+ailed to 
+ not found
+! fE
+0. E
+': U
+ : g	
+` for 
+# eU
+Stop timeout if any.j
+astart ,	#Se~
+X null$
+elect the Appl
+ro.arch
+Invalid address/ A	
+0sup"	Aed.
+st.vendor.
+!.ad
+0Pre
+qlength_+
+ was thrown in -fno-e
+s mode with m
+b "%s"
+@/st/^
+psource/
+caster/
+/3.0/hal/
+.cpp
+Sen`
+R apdu
+exynos9810
+Race detec2
+aOMAPI \
+192.168.7.239:
+STATUS OF TRNSMIT: 
+@sett
+3up 
+Shandlv
+SIGALRM. 
+O_ms:
+Dover
+894069bcfe4f35ceb2088278ddf87c83adee8014
+get available
+P, try
+8 SE
+ alq
+Py com
+0AIDf
+Abe T
+sLogical"
+Response
+pbefore 
+7all
+Google
+3eSEH
+P: tra
+works/nativev."s/u
+/ndk/include_cpp/N
+auto_utils.h0
+0isC
+@... 
+=2. I
+/pXH
+5#4;
+0@9(
+2@9Z
+b@9h
+*"	4
+[@yW
+	h(8
+pk78
+r(1@
+)	@y_
+c@9(
++#C#
+!@2\
+@($@
+b	-@
+6/	8
+P	iM
+!D8`
+!d0T
+.R)B
+*J	B
+rh~(
+!4=l
+Xl'!
+0#@9p
+Ta*@
+!D @
+*B&t
+|+"Z
+|+&A
+t+#*
+X0!C
+0q@9
+HD' 
+rC9p
+T	q@
+##0t
++"8|
+#d|X
+_array
+.fini
+text
+.got
+.note.
+qpad_segC
+Biden3
+.plt
+.rela
+pbss
+.eh_L
+_hdr
+.gnu.v.
+1.roA
+Po_pad
+build-id>
+amic
+.shstrtab
+b_debug
+7zXZ
+P+xJ
+EIZZ
+lTN!
+,'sq
+d(=]8x
+Q:HU
+Ku8-
+%!_L
+g	0~
+|4U3
+h1#n
+(VuP0
+|=,L
+]z/|
+vk	P
+E/YZ
+BpG*
+ pG"
+07070100049427000081a40
+2c9c180
+0odmp
+rflowlite_touch_cH
+#`|@
+B&NB
+* H`
+__cxa_fin
+atexit
+TfLiteI[
+ppreterC
+ReWithz
+^edOps'
+GetInputT
+_Index%
+?Out&
+ModifyGraphw
+Delegate)
+AddBuiltinOp%
+	oCustom$
+PSetEn$
+Fallback2
+OpResolver&
+UseNNAPI$
+ResetVariy
+SetAllowBufferHandle@
+__stack_chk_
+;catS
+_Invok
+oReport
+PNumThp
+>izeX
+YModel
+yFromFil
+zByteSiz
+@Copy@
+>ToB
+Ni-	
+iumDims
+Quantiza
+KPara
+4TypD
+abort
+memcpy;
+.%Co
+1Get
+expm1f
+free
+logf
+tanhf
+<setW
+__errno
+bsearch
+str9
+,.2oll
+;ull=
+OEqua
+@Free
+hypot
+Bmovei
+cosf
+sinf1
+Afmod8
+aisspac=
+0len
+setspecifica
+fwriI
+tXNNPackM
+_fault$
+Pool
+getauxval
+ond_broadcast
+udestroy
+Ejoin
+]mutex#
+Klock
+posix_memalign
+v_gettimF
+ponce
+cnanf
+syscaC
+ystem_property}
+__z1
+_log_vpri%
+mmap
+fsync
+ren0
+dlopen
+dlU1
+AGetS
+bparsit
+IFloa
+fclose
+fileno
+fstat
+1pagS
+touppe
+4key3
+1vsnh
+fputc
+0wai
+islower
+iswalpha	
+Pblank	
+Pcntrl	
+Pdigit	
+1unc	
+rxfrm
+5tow	
+3vas
+0wcs=
+_message
+@log
+0log4
+plibm.so
+3log
+ dl	
+dl_iterate_pw4
+$ORIGIN/:	
+VERS_1.0
+LIBC
+#tC(
++0] 
++8^0
++@^@
++H^h
++`^P
++ _(
++x_(
++0`8
++@``
++P`h
++ ah
+/ bH
++8dH
++@dH
++`dx
++pd@
++Hf 
++(g 
++0g 
++8gx
++Pgp
+2iE(
+"M(@
+#i,@
++0iP
++XiP
++hi`
+2AO(
++0j@
+kx	)Q
+#B`@
+/(l`
++`m 
+#5a(
+#>aH	
+#Ea@
+#Nax
+#VaX
+#jap
+"o,X
+0	+8o
+9rn(8
+$"L"
+"^"H
++0u8
+/8uP
+u`	#w#
++(v`
+/HvX
+"z$h
+")w,
+C.Hx
+xp "
+)@%P
++ z`	
+,hz`	
+),&P
+)},(
+"&&(
++ ~@
+)+&P3
++X~H
+)+&P
++p~p
+	#+&
+1#3'
+C)4'
+<)4'
+`?)9'
+#g,iu
+#v,p
+"L	P
+"M	P
+"Z	 
+x	"7
+0	"4
+*F& 
+7v|~
+PJ&	
+/!RH
+99%	X
+Hw%	
+!IDp
+R: 	
+!@5T
+ih8J	
+TKq}
+caE@
+Hp*!
+>   
+Tlq}
+So|@
+Lii8k	
+qt>@
+.T	`J}~
+FD`!
+d"N!d#
+T	|@
+K(}	
+Rhj68
+oELU
+L`!@L
+L !@L
+!@L&!
+T8!@L	P
+!@L4!@L
+OY}@
+=n d nmP
+@9k	
+&-@Lz
+1*-@\
+<nEa
+>nC(
+NC8!n$
+	B8!.!
+N`h`n h`nM
+t-@L
+3 -@
+!i`8"iq8@i`8Qiq8 
+jk8kP
+-il8Lil8
+@M*}
+@(-@Lh
+1NEb
+=nPb
+H!Ndj
+"@Ld
+Li),
+Tlii8
+Wn!d#nl
+Z(#l
+!@Lt
+)*!@L
+RW}@
+"b-@
+B`-@L
+0n'c
+@"-@LL	.
+(6@"
+BddNcdel#
+BdcNB
+@@q(
+qk=@
+d9#?+
+cd9.
++d9.a
+K|9cW
+J|9 
+|94"
+	|9&
+d9S`
+<`DA
+gu		
+"o	ps
+HUj)
+# 9`
+4B'/
+(Bb:
+BS*q}
+ ?#l
+0$/U
+kA@9
+ @(k88p
+T	[Z
+_T	L 
+`@#5
+^.C5
+HG0a
+P@(`
+$%px
+0^!s
+#9L]
+&+<D
+.`$P
+]/kF
+rAG@
+Q4N9
+pQ !
+e*j'
+&CF|
+h@\V
+jSJ	
+k*@)H\
+Yqx1
+~	S?
+0	2!
+S)k58
+(i58
+=(+C
+j14TB<
+4H$j
+\oQq
+$54|
+LC1i
+@!yj
+	t#! 
+!^c@'
+ij(p
+UZ6k6
+S)	*
+!^B@'
+<$	!
+:)|.$	
+T?h^
+xp'E)
+klfG	
+TNd%
+d%.3
+d%1S}
+^@?@
+(L5 
+|7b@E
+XPMTc
+ VSIA
+" Vb#
+PL +
+rCE@
+8`TK
+:N8W7O
+V7O9
+$N+p
+(""?
+!{(p
+#N0<
+.0L 
+T-}@
+R)A(
+R)}@
+A)c|d
+%Qa|
+#*m}
+JTK@}
+_`.C)
+$*)@0%
+7pNk
+mN+5
+mn+,
+pn+5
+kNP5
+4Nkx
+knJu
+|Npn
+O|7`N}
+~nK5
+@q)=
+A@qi
+!@qi=
+!@q!
+!)k@
+s)k`
+!@qJ
+_	@q`
+=Kk)}
+%<q)
+T/S*
+~n(5
+31N>\
+`en{
+pfn9
+zn9w
+}N9w
+|nx^
+{n{w
+xny|
+<Lf0
+bDvp
+rPR"
+R!(#
+=xT7O
+Th%@
+7` G
+1/>O
+,Hc@
+=1I|	
+|X!	
+TLh3
+ja8!
+ @1c
+y!xP
+8 	k
+Jhz6x
+1!L 
+aj.<d
+Tk|^
+[@*V
+rFd!
+W7O\
+NzW7O
+9n{@
+NL0b
+?nZW7O{W7O
+T)hXCj
+r%H_
+r1H_
+r3H_
+@_@b
+%N%X_
+$N0L_
+'N\_p
+'N2x
+T7OQ
+alm5
+HXdp/
+_L)T
+p'G)
+H)D(
+T(&"
+T.X`
+@` +
+@I		
+h6/kaD
+C0}~
+Ls`~
+&mV@
+qnRM?
+L!Ck
+dnch
+YG. 
+@MDW
+rnrV
+pnRNbN
+LbNsNbN
+LbNR
+qnQNcN
+LcNrNcN
+LcN1VdN
+TdNRVdN
+TdN1
+pN0V`N
+T`NQV`N
+T`Nm
+(!.1*!.
+@9Fhi
+@Mp4[@
+@y0"
+fP!>
+!!1x	
+(;@1 
+?"@11
+@y#>
+1? 1
+%*!>
+py@!
+S?"@q
+?"0k!
+1*1>
+@y1 
+? @1!
+($cy%<
+&*#<
+ @q1~
+dA@%
+q@l.1
+@!@(!
+"d8X
+!H;@
+S0,!C
+E)H$7
+Cs)J}
++Q)B|
+G`%1
+,?6D
+-,4I
+hfb/B
+7xd?
+jC){
+?"9+p
+8$>i
+h@1H}
+X4	@
+4K1s
+PJ.U)8K
+`j78(
+S`_s
+HK#b
+@)L,C)k4
+@J}*
+>CJ)
+1)})\
+%p}@
+9%DC)
+D)p#
+d1C}/
+E)Z+
+Shr}
+0o)r}
+@T}@
+_(r}
+=	0@
+<h&J)
+)iZ@
+!k pF
+`ma	k
+R'C))
+PAL!
+<c@X
+@MDs
+bnb4
+cn"@
+Td4\
+@M! 	
+k"J)
+<``u
+K)hZ
+/B)L
+@M+ @
+@M,(@
+0z@e
+N1*a
+(aNF
+H!N&l'N
+m\ S
+0eqD
+&11~1
+behi
+(aNE
+N\*P*
+E)q@
+#.G$	
+Nc(a
+C(aN
+cNB(!."l".
+(!.El%.%d%.
+pyb4
+|	1a\
+"4& 
+TMq}
+0<0%
+T| @)
+h~zlA)
+&K10
+TJ ?#4gB
+Xf+%
+E@l=
+7/q}
+or6rN4
+$N1F
+1V0OrV0OR
+*aNPdqN
+ncN0
+C(q#w
+l*3@
+/,At
+$m0	
+58>@(
+qb(T
+`bH+
+(p0"
+"" #
+8*L3
+}P*!@
+*c	H
+T),<
++ih8p
+D'Vc
+&K-,
+&K6,
+u/1"
+T	}@
+#NCX nB
+$;@ 
+!0x,
+%NeX n
+h@zb
+Trqb
+T?=(
+/ho8Hr
+"k02
+X/p#~@
+/k<3
+.hn8
+$@	x
+-hm8
+*Cho8
+9!*0
+ip8?
+S/~@
+i`8_
+"/Lr0
+8$4/1o8$
+4/wo8$
+W8$4/
+/5l8$
+/Vl8$
+g8$4/
+8$4/>i8$
+/	`d
+qmu}
+zEqm}
+blu}
+p@;~@
+.)E`
+:ih8
+8`Db
+#4)`
+?O<y(
+"/yX4
+./iW
+5H	b
+70yF
+pih8
+(ihx
+ @9	
+j"@9L
+kih8
+Lii8k	
+	 @9
+Pi"E
+S		@
+#@9/
+E`_@
+!H#,
+@8LB
+"nM(
+(#"h
+*i|"0
+|p"b
+lX&p
+1	!@
+"p	`
+P/"a	
+@9X	
++@0"
+T	@ 
+!@58
+@T)0il
+.FiT
+.liT
+X nc
+DHy)
+1g?r
+H/xqp
+Cp{h
+#@,D
+/k!8
++hO2
+DB}~
++A8#%5
+-0|@
+#@)J
+(%@)
+S,}@
+4T@)
+Q6\A)
+cA)y
+*jH*
+	*/D<WPq
+//) '
+al*5
+H,!	
+Tl.0
+@I}	
+tSbp
+"~j`
+qM|@
+5L* 
+fRi*8k
+"J$<
+;ADi
+*/9fL
+.3fL
+5\/ 
+T 3$@xT 
+/<8T {/VdT 
+7T [/
+n|T "
+xT C^
+T _A
+@T K/g8T ? 
+{ , T
+q)~\
+*(k&j
+D}@!
+@U@[
+SLu}
+	` EqP}
+@I		
+$O`D
+oH1 
+Rj"@
+.G@0
+%!'s 
+,+`S
+SQu}
+\ SR
+@H}~
+(+#!
+;\9T
+TTg@
+T4@)@<A)
+4Q@@9
+/h( 
+&N%@
+B@9(
+#P	2
+dT	pn
+	x`B@
+9j.F)xR
+Nl:K)kq
+lP/o*
+=J0@
+TD-A
+SsK)
+<)0@
+<)h@
+C|e"
+TNLp
+21+}
+PGpM}
+o@@9
+R,4F)
+= @@
+x*$K)+h
+R*4K) \
+9)@Q!
+6/O&
+!/?(
+=H0xy0
+d((@
+T@|@9Ot@9Qx@9L
+Cp@9
+TB @
+&P@9$
+4P@9'
+	)A)?
+T<&Q
+T4p@96|@95
+7x@98t@9x
+qYp@9
+[|@9Z
+q\x@9]t@9
+!8! 
+"F 4
+ H)?
+QM}~
+503@
+a"n"<
+$@uN
+4|)"h
+uP(a
+p?"`
+d"bMt
+8.O!
+|Y"4 
+; 	k
+.$H.
+.$Hb
+H.1"
+E@dA#q
+l(J9
+OS+u}
+K,O5f}
+O9S}
+ E%k	
+(K@g
+[P= @
+$.a!	
+!^#@!
+=+	0
+O0@9
+83/^
+8W/k
+Jp@9
+8- C
+<I0@
+X6rdq
+X60q
+9iH/@
+0@9V
+Tw|@
+TZL9
+LH4@
+Sn @9
+)- @
+7	) 
+x4"`
+@:@l}
+9 ,@
+:",h(:P-
+b3B9
+<l1	
+[o @9
+h</r
+TM @
+Qp@9P|@9@
+Ox@9Ct@9T
+0P@9.
+? n8 
+	kKX"
+Mp@9L|@9N
+hVDJ
+@0P@9
+p@93|@94
+9x@95t@9Vp@9
+qW|@9X
+KZx@9[t@9
+P @9
+({.*_({
+Z0{T&@
+0{"^
+w}@8-
+X%A)
+xPWA
+gD{<
+g.iB
+T-3/	
+T-W/
+L-@K
+Sh$f@
+L-bb
+L-bmR
+9)5h
+X-"&
+9h$@)
+@)@A
+1	)L
+l)OL
+l)	F
+El)2O
+0&A)
+dw i
+N"Ha
+"HaN
+oin8
+eNE@
+D($@
+*	 &
+)qij
+)4KR
+p:SY
++ih8J	
+1!H*
+`e"@5
+K@Gb
+#K)H
+RDE"
+4j !
+12*?P
+H}#!l
+"D5H
+!4:\
+"0?L
+	t*&
+s\	/#Mp
+.PI3@9
+P."KK
+.`!*
+kA,\
+!!-$
+c,+ 
+T]@K
+"kJ 
+*C6,	
+`3"c6
+ 	O;
+#C<5
+'p~*
+3Z)G}
+)H3@9`Ab'Y)
+Jh)$
+	 w@
+"*!$
+(h|qu
+PM@@>
+ @4,
+0'3)
+Hu "
+0#2)
+@<XB
+<D:5
+t.xo
+A<V(
+|w@A
+"N@T
+t`ca
+T;ik
+T*ij
+TK	@
+UP|0
+H!"\
+;8^&
+$2%\
+!<#h
+T""(	
+| bh>
+#<=`
+)!@9
+X0}@
+W4X@K
+*!@9
+!@9(
+T@1@
+HxbK8
+8y"h8
+@h#@9|*
+G7\~
+%l+X~"
+6`~%
+\xX4
+TLq}
+T"@\
+${s`
+@m @
+TpnS 
+-b*	@
+	a(/
+!(/|
+\r`T
+'B)(
+#3)h~
+#2)H
+1)h}	
+#0);
+W@)i~
+*41g>
+Thz{
+A)	$
+.B)I%
+2C)V}
+XC	D
+6!404
+I<.8
+!86t
+n@!R
+t2U*
+,$Wj3
+Lii8k	
+T(\GD
+8=!H;
+*b	$
+4h|@
+ -@D$
+aN@ha
+'"c!
+N!X nBX n!(a
+V_n!
+W`NB
+ |+:
+@8L%O@
+V NB
+@"/ 
+L_nA
+1"c$
+*<00
+2!G$t
+c`E@
+63;lC
+&KH,
+.S4X
+	/,A
+&z/ 
+&XC 
+So!.
+3tM/
+'x-`
+.QcX n
+.U#nB
+AL9< !
+S#|@
+/+hH
+h/ktH
+""5p
+/W)H
+3"kkh
+&+C,
+"Klp
+&]/p
+K 	"
+""!p
+&V)T
+_#nB
+NB<`
++/M	`
+4>/j
+!4w0
+@x}@
+3	*b@
+@i}	
+5h,8
+_i1R
+hj78H
+T<4P
+q+U)
+%#oJ
+%#/+"
+%#om
+%8%X 
+H>)/R
+H>*/
+NH>=/
+3?A4
+To	@
+Pq+E
+0 @K
+# "C
+p 0"
+Lii8k	
+!Ey~
+m.*s
+X+P(
+<@y{
+"\	TI
+#f31
+k7}@
+,8-U
+ka!4
+LR (
+4/k@
+.-<x8
+|.I/
+/Lo|.
+n|./
+/@n0
+/4m0
+.xl0
+/(l0
+.lk0
+;'.a
+;%/>
+;'/)
+;//{j
+;//jj
+;//Yj
+;//Hj
+;3/\
+;3/~
+0"z*
+\:DcC,
+C+ v
+Xf$0cXf
+4=@&
+TiJ@
+:p!@
+S*y`
+-P(GB9
+#<	2
+3	*_8
+mij8
+@HL@
+5(;B9
+5(3B9H
+'p-@
+P'DH
+G@(#
+<	Vim
+^({!Y
++ih8`KD@
+@4TB
+q6B9
+KH!	
+7Q)J
+L=`+
+@y	 @yH
+TWh[
+;<6@
+I-@)H
+.A)(R
+!2 Z
+y)}@
+@9yh
+ -	@%BJ
+|$" @
+"BW$
+@B}@
+Q"BD
+(,*p
+T*q}
+l4jj
+@Myl
+gSPym
+SRSA
+en$h
+K$hc
+q$h#
+ejbx
+<1B8
+t""9Pp"3
+Ob("
+<"p}
+D !j
+!^H}
+[D f
+#RL 
+PL .
+)a)}~
+q)h	
+s}~H
+'@I!
+|3W{
+x3S#@
+	a"}
+*h'q
+'@8h
+_8i$@88
+(hl8ihl8 
+*-@)(1
+atH@
+Mh4C/
+Mh4?.
+Lh48
+J\2/dL\2g/
+J\2G*.L\2/
+/#L\2
+J\2k/
+@9	0@9
+*T4@)@
+O0@9
+4Q4@9?
+#<WQ[
+`@9	d@9
+P(`@9)@
+PH`@9I@
+9)5@
+TpZp
+<I0@
+l!Pc
+*],V
+<(0@H
+A( @
+=(h@
+9h$@)
+@)@A
+b@9J
+1	)L
+@9+4
+r*@1
+T	D	
+@	PG
+=J0@
+<(hp
+*,vc*
+Qp@9P|@9@
+Ox@9Ct@9?
+0P@9.
+TI @
+Mp@9L|@9N
+Kx@9Ot@9
+T)x%
+,P@9*
+@9Dz
+N"Ha
+"HaN
+B(!.
+Ad!.!l#.
+oG0@9eh
+oin8
+eNE@
+Hn&m
+Hn	&gPDn
+(l8"
+:SL}
+^)I$
+w|:`c
+xE)X:
+Kx:	&
+x:"A
+?	~	|\
+TH4C@
+;	)(
+9'/j
+2A/$
+2C/#
+2HN>
+7R))
+HNPh
+`C7@
+])	)	
+dv @
+s,NQ
+ch2B9
+i6B9
+J<c0
+ q1)
+hFB9H
+6B9	
+R5Xu@
+	pSI
+P	!/
+<0yH
+d@g(
+D		O
+k<B9_	`
+1yh ,G yh0
+yh4LG
+h<B9s
+.N_H
+"m2\
+"[2H
+l<B9
+yi H
+yh,@
+)h\N
+	/h]
+/0]<
+%"*	
+R@9 
+S+	@
+1@f}
+'H)(
+V@9(
+"V-|
+l/5p
+<@00
+@`P!
+H=	D
+?pGE
+1!("
+0f`TTB
+JL*,
+$Ubm
+3-)p
+Ti @
+ 1*t
+k-H~
+	K)}
+&$dS
+@)+1
+# IQ
+l "B
+T@P*0
+!L D%&C
+)l*"
+@	!@
+J1!X(
+X(" 
+vX("
+L(IS
+"y#L(
+"g#L(:
+&V#L(*
+'"C#47
+"uO`<
+# #H(
+T'!C
+#L(+
+(.=O
+1I}	
+`1~@
+,e@N
+p/n)
+?mJA
+\y@}
+2@,!
+@h~@
+ [)0
+42 G
+q%A)j-B)t
+TJ(<
+|\-Q
+SAL.
+	KDu
+K`s!
+A@)}
+L@&j
+L#b j
+jT9"
+%UAi
+rB<i
+,)B!
+	&1~
+	@9Tm
+@9)@@y
+)h6@
+Htbi
+Rjzi
+)\sp
+r@yt
+=(l\
+@	)h
+b($@
+TQx!
+dG)5
+lI)d
+ B9 
+TDx!
+tG)0
+XG)7
+TG)"
+S'|	
+`G)4
+@'zg
+0<G)<
+$B9	(B9
+Ppyi
+gp&D
+	,G)
+>I)M
+9(J"
+O ih
+hx}A}@
+E@T."KE
+`!@A
+Li@ 
+FD`i
+1C @
+qin8
+/m/^
+/?/9
+/*g:
+/k/L
+,.p0@
+TOx1
+4+3$
+,50I)
+-p0@
+QPx*
+T'[.
+,4/k
+Zt)?:
+=hl)
+}`''_
+ `'8
+`'2*
+`'Y/
+`'o!
+!`'K
+	\' 
+}\'1
+\'/b
+}\'/A
+2\'K*
+\'o, @
+\'!.
+", dn
+@.in
+1lh*T
+"* d
+t'l/I
+Ws/[
+t'/.
+0t'/
+t'"*8t'/3
+t'k/o
+t'k/
+t'O/
+t',.
+|' /
+0QA4|
+PT6?
+Kq7~
+R@J"
+W$w^
+W"xb
+KxR4/
+xR b
+d +0
+($+K?
+(+Bbi
+d	q}
+BB}@
+?/BU
+cl9D%
+%|'h
+"|'x
++ih8J	
+}PqW!
+ X!p /
+*X}~
+0#M)
+/: l
+/2 l
+b9hB
+%t,`
+!@54
+"2=L
+/AA)M	@
+N'@)J
+4	-@
+T4$1H
+@"c@
+(d.0-
+`)	@
+47@U}@
+A)))
+?[)JE
+*<Eq
+4^ia8t~
+.9!\4
+1@4TB
+\j1)
+?|6W
+*S.q}
+	j	 
+)(F@
+lR@@|
+P)X%
+;xop
+Ti$&
+$P-}@
+K(`P
+QS}@
+d	@S|
+Ks~	
+	2_m
+PVPa
+F)Ld<0
+|=!*
+$n!@
+K`E@
+|70/@
+'@)x
+F0z3
+@0}@
+{@\7
+t "J
+KaG@
+6p83"
+@Am10
+1P/	
+Gh6`
+85CX
+t6"IDt6sh
+*VDh6
+/d6r
+t6d>
+@yQ@
+1460
+k,X<
+?lY@
+K!A)J
+XA B)
+QjH 
+pXc|
+"?3h
+?"?C
+fp?0E
+5$O!
+@OV?@
+@ U)
+@MI}~
+T+}~
+Q@il
+@@L 
+@`i,
+('@)
+S	}	
+Dt\Q
+N	]@
+<njx
+<nkx
+]$N1
+!q@t
+"n{P
+JW6Y
+/bfz
+ @dx
+-"(pT
+ i k
+#	m t
+L<@(
+N#^@
+<N{l
+;Fmd|
+Np}@
+xFN"
+xi!r
+xGNC
+7<wnC@
+zPND
+j8w.
+/B)IY	
+KP~ '
+!3@8&!
+K$p c
+ks$a
+mgB@
+qJxc.
+9@vp
+	@9L
+ l`3*s
+w@E|
+xw@k
+5PXS
+Qxty`
++B)h
+p8CNcxCN1"
+0s")
+pw J
+\@-l
+	@mn
+1J-C
+=J	t
+"*  
+x~_D
+c/1Q@
+}/OF@
+ @yv
+@yE#
+0#4k
+!.k!
+!<kpf
+0Hv1
+"!HH
+j1JE0
+P#R)
+P|p&
+,w!?
+P*}@
+ HaNbHaN
+(!.@(!n
+HaN X
+FFd	
+	Kk}
+Q;N)
+/Q)_
+Tpg@
+!GAh
+I)I		
+V(OzV(O[V(O
+o$nu
+o$nhk0
+N9Ka
+YKaN
+KaN9
+`N9+!.Y+!n9g#n
+9o$n
+7UX@
+9g%.9o&.
+@M1HB
+g#.v
+o$.x
+.8Kh
+n$.u
+EP_@
+Tr<@
+\V(O}V(O
+%IIaN
+o0n_k1
+IaN?
+@0n#
+B1n?h
+4c([N
+(ZNH
+(YNI
+(XNK
+(WNk
+(IaNjIaN
+)!.()!n
+NcHa
+HaNc
+`Nc(!.
+Ncd'n
+cl1n
+cl0nZ
+8ozU8o
+ O@(&
+@cd1.
+@cl..$]
+8oYU8oJ
+;U8o)
+(Cp	
+NJ<2 
+T.}C
+n#j{
+`n|h
+n".k
+*HN7)^N
+NI)]N
+Ns*\N5
+JaNs
+`Ns*!.
+`sn".1
+`N))!.)e!.
+`n)m".
++KN	
+l".H
+N7)]N
+S^|@
+	`n)	
+k	`nJ	`n
+e!.O
+)FNk)VN))QNJ)GN
+*IN4
+f	`n+Z@
+S4	`n
+	`n#
+	`nq
+-IaNl*KN
+`W	`nsf
+P4PK
+bX .
+*&hb
+a.,;
+aX .P~
+_8cTH_
+T!l|
+TH_,
+!.l$
+(F)t
+NT:SNRzSN
+zPNP
+Nu:TNszTN
+ nqB
+TJ,I)L@@
+Sg|~
+oo|@
+Qe~@
+N3:RN1zRNr
+q:GNrzGNT
+'n0@
+'np@
+0&A)
+D|	ba
+(.Qx
+0JaN
+n?.pp
+)"0{T
+H@ps
+cqPA	
+KL0r
+N$:@
+N >@
+(.K1L
+z@LO
+/.Vy@LP
+z@LQ
+1.Xy@LR
+K`DQ}N
+}dD@
+,r @
+q7{@L
+*.3{@L
++.Ty@L
+..9{@L
+/.Zy@L
+>@3+!n
+sf>nsn?nZ
+"8{@
+"Yy@
+:{@L[y@L`
+..[\
+XQZKa
+XQ|NZ
+W1X+!
+o?n[(
+@yPxn
+@y0n
+1.2:QN1zQNe
+*|]D
+C@yt
+/D)Im|
+mpF@
+".sl
+bQ| 
+Ny}@
+PE@m
+;G)9
+4'B)x
+Lii8k	
+@M	@
+pmP-	
+1*@)x
+N$	L
+bhH(
+*|6qI
+(+"B
+dVSl}
+=dhp
+kB	8
+@9SQ@)1D
+@9B!
+ohm8
+@9Q	@)
+@9O!
+#pho
+7tz~
+Gcsc
+223@
+#@yT}
+@yA1
+_ (k
+!!/D
+`l@@
+D{3	
+,@wA
+ k!|(
+oi.8
+.S@\
+s|N#
+YV(O:V(O
+V(OTn
+0"Nf
+YK!N9g!N
+@M %pz
+KaN]
+XkqZ
+A9k1
+W[KaNzT
+)RD@
+Tp<@
+V(O=V(O^Vh
+g%Nc
+o'Nl
+,!([NB(ZN
+Nc(YN	
+(WN+
+@AHaN
+`N!H!
+NAH!N!d%NT
+!l'N!k1
+D!l&Nd
+@9i@
+@A[A
+L!d'
+1!l.
+XT@d
+NRJa
+<rJaNR
+`NRJ!
+*HN5)^N
+N1*\N
+QJaN1
+`N1J!
+N(U"
+E*HNr*_N
+)SNJ)TNk)UN
+(FN(*ON~*MN_
+A*KN
+	`nd	`n4.@
+n*NN
+Nm(MN
+P	`n
+*LNu
+N7;VN6{VNWX
+"1>P
+N2:SN1zS
+xPNV
+T	I@
+S	-@
+qVY	
+L/x<
+`/0p
+9@Pp
+BPm0 
+#"/ 
+@L`r
+!/+dd
+& +D
+##;`
+5(r@X
+ +<X
+w;Nsn=NZ
+`Vd:
+XK!x
+J5,(
+<	,@
+@5XB
+Px@Kh
+@4TB
+"9id
+@3PB
+2p}~
+8Lc_@
+#0_D
+4:-@
+~ yH
+< yH
+oP<z
+/sc(
+"_c 
+&Nc(
+ ,`FO
+(F"HPx
++ih8J	
+Tks}
+"K,x
+TKs}
+@KE@
+@i}	
+NJ!X
+ 	k,}/
+*S/D
+T*u~
+NRZ n
+8a.2
+/*	P
+DhaNehaN
+vl	a
+ji84#
+1!L= 
+x#@*
+0ih8\
+(ihx
+@=1	@=2
+!~c8 
+0%@)
+%@-)}
+ 1A-*=@-
+@2`*
+10|@
+X n@
+o`Hop
+h!aA
+(<3L
+`+!*
+X&0	
+Ri[	
+Th{j
+Rk58j	
+,/@3|@
+7L/P
+h-@?
+t2P9
+800!/
+Hdei.
+	=@)
+&#Y0
+@(|@
+!_A4A
+T7,M
+`$p+
+	T#!t
+b@9C
+qx# 
+3Po$
+b@9*
+<Jpe
+!W)];
+	 @9
+ h	,
+mShSb
+@8!h
+P$ B
+$@ur
+d%0@
+	@jF
+d$@>
+|%@M
+T(E@
+kh	d
+`4^0
+"-@l
+E\N1
+L' 	
+TuR@
+t'"h
+D5`91
+$px|%
+lF.A
+,Zz*
+ !L	<E
+|D"C	|D
+[&c	t!
+@p">
+X$PW!
+aPJ?
+!"8#
+`#")
+#`%x
+PB@@
+\Wp"
+&PPB
+[H7u
+GoYJ
++@	#
+P	| 
+B@)} 
+liJ}
+riJ}
+=n|~
+~0C[
+B)4k
+C)!A
+q:A)
+,x"U
+DP}X
+xp"dCxp
+$z&5
+Do"SC
+.9ox
+ ?#P
+pq!}
+\xp!
+TMq}
+n4M 
+67*u
+m\yH*
+.@@@
+,`1f
+Tir}
+?C		
+~Ltl
+h0"Vlh0
+T		@
+3$-@
+P	#	>
+	@A	
+6T?0%
+,\P!"
+,0#&Q
+T(-@
+XA.#
+TA*:<d
+!H;@
+@-!;
+S y!
+NA@9k
+4L-@)H 
+,/D 
+`V@`
+	p~!
+p'@)j
+1I}	,
+?)}	\4
+	K)Q
+C R_
+<	bx9
+?}Hk
+Rk}@
+!@),
+7A|	
+T61byi
+&(	h'
+!\< 
+d{bw
+`k	@
+QJ	\.p
+5t{9
+byj,
+T)}@
+ALx"
+.1/1
+Cl	$
+l	"?
+#c{<
+x/j3	
+T'@z
+l6#6zhJ
+yhJt
+H	/:
+T<?!
+t^"i+
+`U*q}
+1"H x	
++d	"k
+7tdd	
+1Kyi
+f5|@
+&K'D
+*s'0
+++'P
+te#J
+"BSP
+$g@ 
+@M4{
+@MKm|t
+@MKu~t
+@MKi{t
+"?sX
+*L!0
+@RAp(
+/lB k%
+ kS!
+%C@%
+.SQ`
+.C%D
+&>%$
+lc!.%h3
+|3"5
+T$lf/n$
+"eO`
+4!0	O
+;l#"
+c<<G
+!haL
+/T!D
+` aw`
+GD2c
+)x[0
+/jLX
+T)tM`!
+H\:j@
+&N"h
+e4)/`-h
+/`-h
+/<D,
+/8EL
+D82W
+.k"(
+@{F@
+'AHL
+.<H8
+%((`
+@D!A
+<K#k
+|I$U
+!\:dC@C
+*@|~0
+b:1@
+8*A%B
+ JCxi
+FRI!
+kD ,@
+%`CK)
+N!(a
+Q4N9
+PB(&
+`_@G
+wn<w`
+('@9
+l]0e
+S9}~
+$#@*
+`#"_
+@qPC@
+U@9H
+@g@J
+`,	@
+klx0M
+(C@4~
+	pO@
+T0q}
+/1"d
+c dS
+MS/|
+h'Plyi
+@}W	
+Bbp\
+\v`HK
+ 0OB
+ B<0
+R!("
+rb("
+rB(# 
+=xT7O
+Th%@
+L=` G
+N6~@
+l{+xk
+@Hp8O@
+X_0{
+PF0~
+s3)?
+50I1
+D7@!
+5Nt8
+\	"h
+99!P7
+?A)?
+l@PA
+";G<
+x("x
+pL@5G
+tX@i
+H#bL
+@	|	
+H	~	
+&72`n
+dqV'
++l,0
+J<r0#
+^ri`
+03@$
++Hg&5
+LdBb}~
+X6S`
+	(P@
+R`}(
+N,; 
+ $;q)C
+=  @
+`-_C
+	..y
+T[}z
+F,hC
+0	3h
+m(F@
+NsJa
+='h`N
+i`NXi`N
+kvi`N
+i`Nrh`N
+h`NFh`N%i`N
+k`N1
+D8BF)
+pL`@
+@9	0@9X
+*T4@)@
+O0@9
+4Q4@9L8
+(30	
+	$Pp
+	`@9	d@9
+P(`@9)D
+yJh@9
+9)5@
+,5p*
+<(0@
+( d,"((
+<tDA(h@
+9h$@)
+@)@A
+%qi|@
+1	)L
+Z'(@
+n0@)7
+r@9 
+PK1i
+N!Ha
+G0@9eh
+TP0@9
+oin8
+eNE@
+_'uD0
+$^'nD0
+6+	@
+d_%`;d_
+*xn"i
+e.FC8
+,@C8
+f A 
+Ag:!
+RO x
+Py}@
+DU"*
+Lf )
+a1)~	
+/)`d
+1Q}@
+TJ|`@
+E8zR
+d2Sk
+/|:@J
+l~@}~
+oFL~
+\1" 
+/|<0
+$j1j
+	QoE
+~ .a
+TI	x
+TTX!4
+\VPK
+K)	@
+U*q}
+0Z&c
+t_P`
+@mJA
+Smq}
+	1l}
+SLq}
+Th~@
+QL}~
+$0k	
+$*`P
+X/Pk
+T *"
+No$,
+X!C.
+(6@/
+X'?*u
+X'/5
+X'#/'
+\#+*
+\#!*
+\#/C
+\#,n
+Q!40
+0O#J
+5p\"
+RgHU
+lS	@
+dY	X
+W		@
+b(i88
+qA(d
+7H%R
+*t!fS8
+AH9(
+v@	!@
+A8	29)
+@P R
+"(`	
+#"J	
+hT+V;
+Axb0
+*L}@
+TH|@
+	KLF
+nj-8
+_8M%@8k	
+,*I)
+Rij(
+(;"5
+b1-~
+0@@(
+@!y|
+`QK)
+Th	l
+!nA@@
+	8D#
+L%jg
+!X# 
+Hs"P
+@P"8
+cPPo
+"Hdp
+	*b$V
+a$V5
+)T{0
+	tAY
+P.?#
+@(!`
+=iu}
+	kKE
+k0O"
+H8R%
+af	j 
+XG&(
+"a"@R
++@$`R
+"D5(
+/CrP
+"4:\
+ Y'a
+lP	t
+>4X0w
+!x3H
+"X5(
+|w^+
+*lK@
+*PRq
+x%&H
+dh	<
+5(-)
+5xn$
+xU0P
+@U5!
+[d"0k@
+gh&'
+	Vp8
+&b	Ld
+&"	p
+J\Pq@
+'+)h
+"	!\
+4T@B
+Sp;P(E
+"hH,
+t"ch
+B-"	-
+	E-Q
+B-0p
+cfPz
+,	'v
+@-`	 
+P ! 
+X_p`
+L_P+
+4	W(
+hHB)	
+RW%9
+lXP9`B
+bb!1
+PB!1
+I1! ;
+L5	@
+oAD 
+4	H	
+H	"|
+D	#q
+ND	S
+@D	"
+T4h,
+DO8*
+ddN"d
+"h=P
+XyVW@
+P+0S
+P$07
+.?@h
+A,FR
+1@i-	
+1Ky~x
+	Ki		
+'p/@
+A((6O
+2Pj{
+Qmyl
+Sqyn
+K5@iN	
+4`H}
+\k2q
+`n#4vN
+pNwv
+tn[7
+{N47
+qn1v
+rnRv
+gn!$
+<A4vNC
+dnS6
+sN$6
+cnct
+3k(%
+Thjwx|
+v#5K
+kwx	
+Hkwx
+z#5KV'
+"_?<
+X6a	
+{#6Ks'
+?!+k
+Ti=`
+jwx)
+@q)=@
+T?! k
+! @\
+A"		4
+6Nm	@
+5L1@
+5L=@
+V7OX
+&N#T7OE
+!nBT7Oc
+rB(%
+RB($
+rB(/
+}p(.
+g1X"
+r!H#
+1*-(
+r1*+ 
+G{-B(4
+rc(%
+1c(5
+;Bm|K
+{0	P
+	q,:
+	P.L
+POc;	@
+dl	p  
+@c(&
+	1c($
+NI	@
+'N@@
+N,	@
+$n)	
+'NdT7OG
+T7Of
+$at@
+iHG0
+jX;0	
+7`n	
+lJ l
+T?x"
+Dp}	
+luu"F
+i"8!
+fk}	
+OK}@
+z#*x
+ xz,
+5ylx
+*H}Q
+X~@%
+D}@`
+gh& 
+"K%x
+Dq}	
+j$8c
+u%hc8Eh#
+\xgh&x
+#xlw6
+n@hu
+x$s0
+=	0@
+<	)J)
+!k.,
+607@
+)A`G
+d!N!@
+h(8P
+(@o}@
+9\ @
+d!NJHe
+(h58
+[/8#
+x]@a#
+H@,}
+h8H}
+\Y"_!
+f? l 
+C?!l 
++ih8phW@
+m/:m
+L"o/
+(q/[j
+4u&@x
+4+VK
+\lO}g
+@	?/
+fh8/
+H0a_
+T(ih8l
+0ihx
+h	X3#
+T*#	
+T!,_a
+<h|Dp
+m|9@J
+q!xa
+_t#@
+/h)d
+x`4c
+dy l
+Mxi A
+1-@)X
++hj!
+|xq}@
+Lyixk	
+")),
+k`=<
+	@ZU
+@	!@
+$Bi\2b
+p8Ki(8
+'/c	||
+|!^Wd
+%LYW
+@4XB
+<\/!
+;Q)J}
++M)1~
+lG O
+WdmO
+3Ri(
+kL)9
+<h&J)
+)iZ@
+HY4'C)
+6lttR
+F-	@
+@M*0
+@MK}
+@MsF
+N1Ja
+JaNGJaN
+l'Ngd'N
+	p	P
+@dC|
+@M,4
+&NR(
+QQJaN
+UaN0
+Qgl'NG4
+(!.gl'.Gd'.
+`@pk
+WytR
+PF@&
+lQ"Gy
+	x|V 
+ )!|
+$*AT
+,|k1
++t t;@
+"+#@
+&b)P
+7*u~
+P]@Tv
+TMq}
+c"!	|
+$@)z
+T+sx
+	S"A
+@y?"@q
+1k1$
+7,q}
+qn4B
+oQ6qn1
+O0n`N
+faNQ
+0*aN
+">qd
+@B9f
+Tq\1p
+l'.gd'.gj%
+fj%8
+@):he8
+/Io|y
+Sh~@
+@9 .
+R)$.1c|
+ 21B|
+ 2>w
+&NA|
+.?! 
+V)!(
+!/sF
+B|	0
+	PLl
+h]9!
+|,0@!
+/u~<
+ 0 "
+\l a
+'xlr
+I@- 
+N#L"
+T0:&
+(@7@
+'AA-1I@-DL#
+Wh  
+@Q7;
+$"k!
+tqS6
+*\cT
+ha&A
+xdx	
+@I!	
+8?0k
+VyxD
+t/.F6p/
+TO\!
+ A$d
+3@9	
+ij8D
+~C8 
+8K!j/xs
+A!(`
+AB8a
+@b8a
+@c(b
+d0"`
+" 	!
+$aQME
+"|&d
+2*q1
+*lI:
+ni-x
+"x' @
+"v|(	
+7b0<
+l!A7
+)}"H
+ *P>
+hQXI
+U 	k(
+4	 -O	@
+Xt 	k(
+WS{s
+W"<)
+ddY%<)
+S<.b`
+l)"}&8
+@5,9.,
+*k<@
+*K>@
+`|1h}
+Ri		
+Aqy}
+UKu}
+Pi4K
+(.2L
+#,L`
+-@)j
+pp@H
+XV"B
+\$ C
+	x!P
+pE	<
+5(dO8
+H""!
+&pj	
+"@1`
+W	P'
+@,r9
+4$C+
+O @q
+T Li4
+rAi[
+"@)_
+8+@(
+q))$A0|@
+ 5$4
+aWX)
+@ 	p
+c0G S@D
+c8q1
+*~j;8{
+hmp'
+`xAl
+#5)X
+Hq1"
+&@x,
+#z=P
+0#aa
+90#D)8	
+t=C=
+AD7"
+k4E+
+r)J9
+KI5	
+n)k1
+9\!D
+./U9
+8P&/
+.Jn8
+4!mj
+*$88!
+	]A)
+/jK0
+57j)4
+;j)d
+S'j)
+\%9=5
+D x"
+7H !
+/L S
+.g@L 
+gL S/A
+}L "
+#/	,
+h		L 
+L LV
+L >|
+{$@	L 
+7L .7@|
+.?@x
+~L "-
+/E1p
+/71p
+.^	p
+"eOP
+Qf4s
+S	y`
+/<N 
+/tM 
+P3XB
+Tu!@
+@5XB
+Bqjy(x
+_B)(	
+U1k=
+y+x*
+dbN!dcNA
+\Da*
+T/F(
+<ydA
+T"yj
+HK1[
+J %t
+K}@`+
+Yp/E
+I g 
+KQ("
+"Nak
+bak)
+@M	u~
+TpH.
+oA~)q
+ypE@),
+yo	@
+*i+8
+.G@X
+ )gt
+*< `
+.% `
+@L}@
+	@-y
+J<M1
+;0f0
+"0)	
+P(}@
+HX#`
+<sB$
+ +,`(
+Qs}@
+K|A 
+d!n@k
+d!.@k0
+x&P?
+@8@kq8
+Ok18
+Pk.8X
+k@8S
+".!h%
+<8&Y
+jP60
+#$F 
+/"j(t
+p6ckJ
+@!in
+D@7 ?
+9S!k
+"k$;A
+@Ml,
+`B@S
+8d&\
+,^"J6
+`^@	
+%@C	
+dX%l
+_""9
+Zt !H
+PuF@
+T>|I
+)4uC	
+	X([
+TcTG
+Tpr'
+T,q}
+DB}~
+<Ap61
+[mq}
+@S		
+d\"L
+<,1*
+qH{4
+`n0SL)Hn
+F-LA
+QH-1
+ #@8
+,/J 
+$]5,
+mij8h
+6((#b+p*
+P"VK
+b(S@
+T(/@
++$$"
+%1A}
+D&&,Ad
+3/@9
+6@)J
+04	0
+RaE@
+$P.%
+(aNt
+/J*t
+E+ %t
+3"!@
+4{,x
+0a1k5
+N1Ja
+NRJa
+HaN'J!
+GJ!N
++*H|@
+Han'J!.GJ!nd
+&@)6
+#@9h
+Smj*
+S`zk
+ij0l
+"TOO 
+ OO0
+T@XS
+N.(<
+t&0c
+d"q`
+0@9|9
+S0h 
+@i( 
+	A	 
+#Am0
+ V"^
+Q_xW
+V#( 
+Nn1P
+`	@.<
+_1mE
+TA8!
+R	!@
+x@S&
+A9	 
+`dHj
+7pF 
+E1{k
+@;bi
+PHP	
+@I@2
+HA[}
+4yhx<
+`}b	
+B,s+ 
+7dMAB}@
+4i}@
+7$ t"k
+ [.h
+c5B|
+@CD@
+j(8?{(
+t%S(
+bE@@2
+NR*a
+RdE@
+t$#W
+dJ$'
+-4C 
+,hF 
+P@	"&
+4ba%
+l% 	
+/x%@
+%1w}
+<P9H
+6@)?
+-HG 
+D$"o
+?$	!C
+t	P)
+1y(x
+L9-9
+P,}@
+O1y)x
+*b@?
+TkX-
+k@s*
+ ks8
+(k38(\
+[kjj
+Pkj*
+xe!E
+@D.A
+@D	L
+?Tn1
+(P#4
+[0j:
+[fi{h
+[.,{
+ Ps_
+#SlE
+-T{"{7 #P
+! #4j{8,
+akh8
+iux0
++{x0
+x-p;@
+1" ~
+(ih8
+5ZDA0
+Hih8
+)	G|
+	K,p
+Xpq}
+?"@11
+Hyhx
+\rQI)*
+G*U`@
+@ax*
+TO}	
+?)k!

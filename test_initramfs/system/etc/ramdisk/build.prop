@@ -1,0 +1,25 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.bootimage.brand=Xiaomi
+ro.product.bootimage.device=missi
+ro.product.bootimage.manufacturer=QUALCOMM
+ro.product.bootimage.model=missi
+ro.product.bootimage.name=missi
+ro.product.exaid.supported=false
+ro.bootimage.build.date=Fri Oct 16 16:59:33 CST 2026
+ro.bootimage.build.date.utc=1792141173
+ro.bootimage.build.fingerprint=Xiaomi/missi/missi:17/CP2A.260605.016/17OS4.0.261016.164857472.QCPECN.S:user/release-keys
+ro.bootimage.build.id=CP2A.260605.016
+ro.bootimage.build.uuid=l09vlXRdmQTxZlHBoBJ77sf3eRTGMIz-2Rq-SCMWUgs
+ro.bootimage.build.tags=release-keys
+ro.bootimage.build.type=user
+ro.bootimage.build.version.incremental=17OS4.0.261016.164857472.QCPECN.S
+ro.bootimage.build.version.release=17
+ro.bootimage.build.version.release_or_codename=17
+ro.bootimage.build.version.sdk=37
+ro.bootimage.build.version.sdk_full=37.0
+# end of file
+
+
