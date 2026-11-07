@@ -234,18 +234,53 @@ insmod /mnt/vendor_dlkm/lib/modules/rmnet_mem.ko 2>/dev/null || true
 insmod /lib/modules/usb_f_gsi.ko 2>/dev/null || true
 insmod /mnt/vendor_dlkm/lib/modules/ipam.ko 2>/dev/null || true
 
-# Load Audio DSP & Sound Card Stack
+# Load Audio DSP & Sound Card Stack in verified dependency order
 echo "[Audio] Loading ALSA Sound Card stack..."
-for am in \
-    pinctrl_lpi_dlkm.ko q6_pdr_dlkm.ko q6_notifier_dlkm.ko snd_event_dlkm.ko \
-    gpr_dlkm.ko spf_core_dlkm.ko audio_prm_dlkm.ko q6_dlkm.ko swr_dlkm.ko \
-    swr_ctrl_dlkm.ko lpass_cdc_dlkm.ko lpass_cdc_rx_macro_dlkm.ko \
-    lpass_cdc_tx_macro_dlkm.ko lpass_cdc_va_macro_dlkm.ko lpass_cdc_wsa_macro_dlkm.ko \
-    lpass_cdc_wsa2_macro_dlkm.ko wcd_core_dlkm.ko cs35l43_dlkm.ko \
-    wcd939x_slave_dlkm.ko wcd939x_dlkm.ko stub_dlkm.ko swr_haptics_dlkm.ko \
-    hdmi_dlkm.ko qmp_dlkm.ko swr_dmic_dlkm.ko machine_dlkm.ko; do
-    insmod /mnt/vendor_dlkm/lib/modules/$am 2>/dev/null || true
+# 1. Pinctrl & Core QTI audio IPC
+for m in pinctrl_lpi_dlkm.ko q6_pdr_dlkm.ko q6_notifier_dlkm.ko snd_event_dlkm.ko \
+         gpr_dlkm.ko spf_core_dlkm.ko audio_prm_dlkm.ko q6_dlkm.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
 done
+
+# 2. SoundWire bus & core
+for m in swr_dlkm.ko swr_ctrl_dlkm.ko qmp_dlkm.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
+done
+
+# 3. WCD Core (MUST BE BEFORE VA-MACRO for msm-cdc-pinctrl!)
+for m in wcd_core_dlkm.ko typec_analog_acc_dlkm.ko wcd9xxx_dlkm.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
+done
+
+# 4. LPASS CDC and Macros (va-macro first so others don't defer!)
+for m in lpass_cdc_dlkm.ko lpass_cdc_va_macro_dlkm.ko lpass_cdc_tx_macro_dlkm.ko \
+         lpass_cdc_rx_macro_dlkm.ko lpass_cdc_wsa_macro_dlkm.ko lpass_cdc_wsa2_macro_dlkm.ko \
+         lpass_bt_swr_dlkm.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
+done
+
+# 5. Codecs & Slaves
+for m in mbhc_dlkm.ko wcd939x_slave_dlkm.ko wcd939x_dlkm.ko sdca_registers_dlkm.ko \
+         wcd9378_slave_dlkm.ko wcd9378_dlkm.ko wsa883x_dlkm.ko wsa884x_dlkm.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
+done
+
+# 6. Aux audio, Haptics, HDMI/DP, ADSP loader, BT-FM codecs
+for m in stub_dlkm.ko swr_haptics_dlkm.ko swr_dmic_dlkm.ko hdmi_dlkm.ko adsp_loader_dlkm.ko \
+         audpkt_ion_dlkm.ko audio_pkt_dlkm.ko btfmcodec.ko bt_fm_swr.ko; do
+    insmod /mnt/vendor_dlkm/lib/modules/$m 2>/dev/null || true
+done
+insmod $(find /mnt/system_dlkm -name "snd-soc-hdmi-codec.ko" | head -n 1) 2>/dev/null || true
+
+# 7. Cirrus Smart PA (Xiaomi 15 Speakers!)
+insmod /mnt/vendor_dlkm/lib/modules/cs_dsp.ko 2>/dev/null || true
+insmod /mnt/vendor_dlkm/lib/modules/cs35l43_dlkm.ko 2>/dev/null || true
+
+# 8. Sound Machine Driver
+insmod /mnt/vendor_dlkm/lib/modules/machine_dlkm.ko 2>/dev/null || true
+
+sleep 1
+
 mkdir -p /dev/snd /rootfs/dev/snd
 for snd_dev in /sys/class/sound/*; do
     [ -d "$snd_dev" ] || continue
@@ -258,6 +293,37 @@ for snd_dev in /sys/class/sound/*; do
     fi
 done
 chmod 666 /dev/snd/* /rootfs/dev/snd/* 2>/dev/null || true
+
+# Configure Cirrus Smart Amps for Top & Bottom Speakers (Xiaomi 15 hardware profile)
+PATH=/usr/bin:/bin:/usr/sbin:/sbin chroot /rootfs sh -c '
+amixer -D hw:0 cset name="T ASPRX1 Slot Position" 0 2>/dev/null || true
+amixer -D hw:0 cset name="T ASPRX2 Slot Position" 2 2>/dev/null || true
+amixer -D hw:0 cset name="T ASPTX Ref" "Ref" 2>/dev/null || true
+amixer -D hw:0 cset name="T DSP RX1 Source" "ASPRX1" 2>/dev/null || true
+amixer -D hw:0 cset name="T DSP RX2 Source" "ASPRX1" 2>/dev/null || true
+amixer -D hw:0 cset name="T PCM Source" DSP 2>/dev/null || true
+amixer -D hw:0 cset name="T Amp Gain" 18 2>/dev/null || true
+amixer -D hw:0 cset name="T AMP Enable Switch" 1 2>/dev/null || true
+
+amixer -D hw:0 cset name="B ASPRX1 Slot Position" 1 2>/dev/null || true
+amixer -D hw:0 cset name="B ASPRX2 Slot Position" 4 2>/dev/null || true
+amixer -D hw:0 cset name="B ASPTX Ref" "Ref" 2>/dev/null || true
+amixer -D hw:0 cset name="B DSP RX1 Source" "ASPRX1" 2>/dev/null || true
+amixer -D hw:0 cset name="B DSP RX2 Source" "ASPRX1" 2>/dev/null || true
+amixer -D hw:0 cset name="B PCM Source" DSP 2>/dev/null || true
+amixer -D hw:0 cset name="B Amp Gain" 18 2>/dev/null || true
+amixer -D hw:0 cset name="B AMP Enable Switch" 1 2>/dev/null || true
+' 2>/dev/null || true
+
+# Configure PulseAudio default sink for CS35L43 speakers (hw:0,31)
+if ! grep -q "hw:0,31" /rootfs/etc/pulse/default.pa 2>/dev/null; then
+    cat << "PA_EOF" >> /rootfs/etc/pulse/default.pa
+
+### Xiaomi 15 CS35L43 Stereo Speakers
+load-module module-alsa-sink sink_name=speaker device=hw:0,31
+set-default-sink speaker
+PA_EOF
+fi
 
 # Setup Binder for Waydroid
 mkdir -p /dev/binderfs /rootfs/dev/binderfs
@@ -274,21 +340,57 @@ ln -sf /dev/binderfs/vndbinder /rootfs/dev/vndbinder 2>/dev/null || true
 # Setup Bluetooth hardware & power keeper
 insmod /mnt/vendor_dlkm/lib/modules/msm_geni_serial.ko 2>/dev/null || true
 insmod /mnt/vendor_dlkm/lib/modules/btpower.ko 2>/dev/null || true
-mknod /dev/ttyHS0 c 479 0 2>/dev/null || true
-mknod /rootfs/dev/ttyHS0 c 479 0 2>/dev/null || true
+mknod /dev/ttyHS0 c 481 0 2>/dev/null || true
+mknod /rootfs/dev/ttyHS0 c 481 0 2>/dev/null || true
 mknod /dev/btpower c 480 0 2>/dev/null || true
 mknod /rootfs/dev/btpower c 480 0 2>/dev/null || true
-chmod 666 /dev/ttyHS0 /rootfs/dev/ttyHS0 /dev/btpower /rootfs/dev/btpower 2>/dev/null || true
+mknod /dev/rfkill c 10 242 2>/dev/null || true
+mknod /rootfs/dev/rfkill c 10 242 2>/dev/null || true
+chmod 666 /dev/ttyHS0 /rootfs/dev/ttyHS0 /dev/btpower /rootfs/dev/btpower /dev/rfkill /rootfs/dev/rfkill 2>/dev/null || true
 insmod $(find /mnt/system_dlkm -name "bluetooth.ko" | head -n 1) 2>/dev/null || true
 insmod $(find /mnt/system_dlkm -name "btbcm.ko" | head -n 1) 2>/dev/null || true
 insmod $(find /mnt/system_dlkm -name "btqca.ko" | head -n 1) 2>/dev/null || true
 insmod $(find /mnt/system_dlkm -name "hci_uart.ko" | head -n 1) 2>/dev/null || true
-/usr/bin/bt_power_keeper </dev/null >/tmp/bt_power_keeper.log 2>&1 &
+/rootfs/usr/sbin/rfkill unblock bluetooth 2>/dev/null || true
+chroot /rootfs /usr/bin/bt_power_keeper </dev/null >/tmp/bt_power_keeper.log 2>&1 &
 
 (
     sleep 9
     insmod /mnt/vendor_dlkm/lib/modules/qca_cld3_peach_v2.ko 2>/dev/null || true
 ) &
+
+# Ensure apk-polkit-server service for GNOME Software
+mkdir -p /rootfs/usr/share/dbus-1/system-services
+cat << "EOF" > /rootfs/usr/share/dbus-1/system-services/dev.Cogitri.apkPolkit2.service
+[D-BUS Service]
+Name=dev.Cogitri.apkPolkit2
+Exec=/usr/libexec/apk-polkit/apk-polkit-server
+User=root
+EOF
+
+# Bubblewrap sandbox bypass for WebKitGTK / Epiphany (vendor kernel lacks CONFIG_USER_NS)
+if [ ! -f /rootfs/usr/bin/bwrap.orig ]; then
+    cp -a /rootfs/usr/bin/bwrap /rootfs/usr/bin/bwrap.orig 2>/dev/null || true
+    cat << 'EOF' > /rootfs/usr/bin/bwrap
+#!/bin/sh
+while [ $# -gt 0 ]; do
+    if [ "$1" = "--" ]; then
+        shift
+        break
+    fi
+    shift
+done
+exec "$@"
+EOF
+    chmod 755 /rootfs/usr/bin/bwrap
+fi
+
+mkdir -p /rootfs/etc/profile.d
+cat << 'EOF' > /rootfs/etc/profile.d/webkit.sh
+export WEBKIT_FORCE_SANDBOX=0
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
+export WEBKIT_DMABUF_RENDERER_DISABLE=1
+EOF
 
 mkdir -p /rootfs/run/dbus /rootfs/run/wpa_supplicant /rootfs/etc/NetworkManager/conf.d
 cat << "EOF" > /rootfs/etc/NetworkManager/conf.d/99-unmanaged.conf
@@ -331,14 +433,21 @@ export XDG_SESSION_TYPE=wayland
 export GSK_RENDERER=cairo
 export GDK_BACKEND=wayland
 export LIBGL_ALWAYS_SOFTWARE=1
+export WEBKIT_FORCE_SANDBOX=0
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
+export WEBKIT_DMABUF_RENDERER_DISABLE=1
 unset LD_PRELOAD
 
 echo 0 > /sys/class/backlight/panel0-backlight/bl_power 2>/dev/null || true
 echo 2200 > /sys/class/backlight/panel0-backlight/brightness 2>/dev/null || true
 echo 0 > /sys/class/touch/touch_dev/enable_touch_raw 2>/dev/null || true
 
-# Start PulseAudio daemon
+# Start apk-polkit-server for GNOME Software
+/usr/libexec/apk-polkit/apk-polkit-server </dev/null >/dev/null 2>&1 &
+
+# Start PulseAudio daemon and set speaker default sink
 pulseaudio -D --exit-idle-time=-1 2>/dev/null || true
+pactl set-default-sink speaker 2>/dev/null || true
 
 # Start power key wake daemon
 /usr/bin/pwrkey_wake > /tmp/pwrkey_wake.log 2>&1 &
